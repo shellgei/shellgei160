@@ -1,0 +1,2 @@
+This is <strong>a pen</strong>. I am a pen.
+<pre>Are you pen?</pre> <strong>Yes</strong>, I am.

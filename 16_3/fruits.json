@@ -1,0 +1,29 @@
+{
+  "Fruits": [
+    {
+      "Name": "Apple",
+      "Quantity": 3,
+      "Price": 100
+    },
+    {
+      "Name": "Orange",
+      "Quantity": 15,
+      "Price": 110
+    },
+    {
+      "Name": "Mango",
+      "Quantity": 100,
+      "Price": 90
+    },
+    {
+      "Name": "Banana",
+      "Quantity": 6,
+      "Price": 100
+    },
+    {
+      "Name": "Kiwifruit",
+      "Quantity": 40,
+      "Price": 50
+    }
+  ]
+}
