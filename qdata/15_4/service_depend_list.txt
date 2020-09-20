@@ -1,0 +1,5 @@
+アプリA: アクセス分析API, 交通情報API, 人事情報API
+アプリB: 受注API, 交通情報API, 顧客情報API
+アプリC: 受注API, メールAPI, 住所情報API
+アプリD: 人事情報API, メールAPI
+アプリE: 受注API, 交通情報API, 顧客情報API
