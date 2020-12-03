@@ -1,0 +1,4 @@
+id INT
+user_id VARCHAR(5)
+user_name VARCHAR(10)
+mail_address VARCHAR(20) CHECK (mail_address LIKE '%@%')
