@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta property="og:url"           content="https://b.ueda.tech/?page=08865" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="シェル芸の歴史 | 上田ブログ" />
+
+    <link rel="icon" href="favicon.ico">
+
+    <title>シェル芸の歴史 | 上田ブログ</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="/bsview/jumbotron.css" rel="stylesheet">
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  </head>
+
+  <body>
+	  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.10";
+	  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/">Ryuichi Ueda's site</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          	              <li class="nav-item active">
+            <a class="nav-link" href="/?post">latest</a>
+          </li>
+	              	              <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="/?page=00728" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">publications</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="/?page=publication_en">Publication List (English)</a>
+                            <a class="dropdown-item" href="/?page=06030">出版物リスト（書籍・商業誌等）</a>
+                            <a class="dropdown-item" href="/?page=06033">出版物リスト（学術誌等）</a>
+                            <a class="dropdown-item" href="/?page=05535">書籍の情報</a>
+                            <a class="dropdown-item" href="/?page=lnpr">- 詳解確率ロボティクス</a>
+                            <a class="dropdown-item" href="/?page=bashcms2">- シェルスクリプト高速開発手法入門 改訂2版</a>
+                            <a class="dropdown-item" href="/?page=09461">- Raspberry Piで学ぶ ROSロボット入門</a>
+                            <a class="dropdown-item" href="/?page=05787">- シェルプログラミング実用テクニック</a>
+                            <a class="dropdown-item" href="/?page=03344">- シェルスクリプト高速開発手法入門 初版</a>
+                            <a class="dropdown-item" href="/?page=01441">- 確率ロボティクス</a>
+                            <a class="dropdown-item" href="/?page=02939">雑誌連載記事の情報</a>
+                            <a class="dropdown-item" href="/?page=gihyo_shellgei_series">- シェル芸人からの挑戦状</a>
+                            <a class="dropdown-item" href="/?page=07166">- Raspberry Piで作ろう お手軽ロボット教室 | 日経Linux</a>
+                            <a class="dropdown-item" href="/?page=05983">- Raspberry Piで始めるかんたんロボット製作 | 日経Linux</a>
+                            <a class="dropdown-item" href="/?page=02944">- Haskellでやってはいかんのか？ | USP Magazine</a>
+                            <a class="dropdown-item" href="/?page=02949">- 開眼シェルスクリプト | SoftwareDesign</a>
+                            <a class="dropdown-item" href="/?page=mybookstore">著作物の購入</a>
+                          </div>
+	              	              <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">projects</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="/?page=01434">シェル芸</a>
+                            <a class="dropdown-item" href="/?page=bashcms2_dev">bashcms2</a>
+                            <a class="dropdown-item" href="/?page=opy">opy（ワンライナー用Python）</a>
+                            <a class="dropdown-item" href="/?page=GlueLang">GlueLang</a>
+                            <a class="dropdown-item" href="https://lab.ueda.tech/?page_id=60">研究 <i class="fa fa-external-link"></i></a>
+                          </div>
+	              	              <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="./" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">records</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="/?page=00823">受賞等</a>
+                            <a class="dropdown-item" href="/?page=01746">学会等の活動記録</a>
+                            <a class="dropdown-item" href="/?page=02317">外部獲得資金</a>
+                          </div>
+	              	              <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="/?page=01242" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">misc</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="/?page=07879">資料室</a>
+                            <a class="dropdown-item" href="/?page=10067">- Tera TermをWindowsにインストールしてからssh接続するまで</a>
+                            <a class="dropdown-item" href="/?page=10088">- Tera Termで鍵を作って鍵認証でサーバにログインするまで</a>
+                            <a class="dropdown-item" href="/?page=anaconda_windows">- AnacondaをWindowsにインストールする手順</a>
+                            <a class="dropdown-item" href="/?page=04219">dashのコード解読メモ</a>
+                            <a class="dropdown-item" href="/?page=04223">- dash/src/main.h, main.c</a>
+                            <a class="dropdown-item" href="/?page=04276">- dash/src/shell.h</a>
+                            <a class="dropdown-item" href="/?page=04346">- dash/src/eval.h, eval.c</a>
+                            <a class="dropdown-item" href="/?page=01980">おはようございますの世紀</a>
+                            <a class="dropdown-item" href="/?page=09712">研究関係動画</a>
+                            <a class="dropdown-item" href="/?page=10021">- 某PFoEの改良（アルゴリズム未発表）</a>
+                            <a class="dropdown-item" href="/?page=10034">- 某PFCの改良（アルゴリズム未発表）</a>
+                            <a class="dropdown-item" href="/?page=09692">イベント等の動画</a>
+                            <a class="dropdown-item" href="/?page=09663">動画 | Raspberry Pi Mouse + ROS</a>
+                            <a class="dropdown-item" href="/?page=00851">ARAIBOムービーまとめ</a>
+                            <a class="dropdown-item" href="/?page=09678">シェル芸勉強会の動画</a>
+                          </div>
+	              	              <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="/?page=00811" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">links</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="https://lab.ueda.tech/">千葉工大上田研究室</a>
+                            <a class="dropdown-item" href="http://www.usptomo.com">USP友の会</a>
+                            <a class="dropdown-item" href="http://www.araibo.com">Team ARAIBO</a>
+                            <a class="dropdown-item" href="/?page=00851">ARAIBOムービーまとめ</a>
+                          </div>
+	              	              <li class="nav-item active">
+            <a class="nav-link" href="https://e.ueda.tech">eng</a>
+          </li>
+	                      </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="full-search-box">
+	  <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="fullSearch()">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h1>上田ブログ</h1>
+            <p>なお、このサイトはbashでできている。</p>
+                        <p>お知らせ:  <span><a href="/?page=lnpr">詳解確率ロボティクス電子版出ました</a>&nbsp;/&nbsp;</span>  <span><a href="/?page=bashcms2">シェルスクリプト高速開発手法入門改訂2版発売中</a>&nbsp;/&nbsp;</span>  <span><a href="https://employment.en-japan.com/engineerhub/entry/2019/02/19/103000">エンジニアHubで記事を書きました</a>&nbsp;/&nbsp;</span>  </p>
+                      </div>
+          <div class="col-md-4">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-go-p+33-1k-4o"
+                 data-ad-client="ca-pub-7242808947152948"
+                 data-ad-slot="2637185830"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8" id="article-body">
+          <h1 id="シェル芸の歴史">シェル芸の歴史</h1>
+<p id="article-info">
+	  <strong style="font-size:120%">Tue Dec 6 17:06:17 JST 2016</strong> (modified: Mon Aug 19 16:19:44 JST 2019)<br />
+	  views: 5749, keywords: <span id="keywords"></span>
+          </p>
+	  <div id="social-buttons">
+	    	    <a href="https://twitter.com/share" class="twitter-share-button" data-via="">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>&nbsp;
+	    
+	    	    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>&nbsp;
+	    
+	    
+	    
+	    	    <a style="white-space: nowrap" data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+	    <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+	    	    <div id="toc">
+              <ul>
+              <li><a href="#シェル芸の歴史">シェル芸の歴史</a><ul>
+              <li><a href="#2019年">2019年</a></li>
+              <li><a href="#2018年">2018年</a></li>
+              <li><a href="#2017年">2017年</a></li>
+              <li><a href="#2016年">2016年</a></li>
+              </ul></li>
+              </ul>
+	      <hr />
+	    </div>
+	  </div>
+<ul>
+<li>2018年あたりが抜けてるので絶賛思い出し中。</li>
+</ul>
+<h2 id="2019年">2019年</h2>
+<table class="table table-condensed">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 41%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>日付</th>
+<th style="text-align: left;">出来事</th>
+<th>コメント</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8月10日　</td>
+<td style="text-align: left;"><a href="/?post=20190810_shellgei_43_links">jus共催 第43回大暴れシェル芸勉強会</a></td>
+<td><a href="https://speakerdeck.com/amanoese/vuidesieruyun-woshi-xing-dekiruyounisitemita">呪文詠唱シェル芸</a>が大阪で誕生</td>
+</tr>
+<tr class="even">
+<td>8月7日　</td>
+<td style="text-align: left;"><a href="https://togetter.com/li/1385101">うんこが3D化</a></td>
+<td>重要</td>
+</tr>
+<tr class="odd">
+<td>7月24日</td>
+<td style="text-align: left;">シェル芸botが元のコンセンサスのほぼとれた状態に戻る</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>7月17日</td>
+<td style="text-align: left;">シェル芸bot迷惑シェル芸警察宣言（上田）。レッドカード続出。</td>
+<td>面倒</td>
+</tr>
+<tr class="odd">
+<td>7月16日</td>
+<td style="text-align: left;">シェル芸botのフォロワーが3000人を超える</td>
+<td>めでたいが大変</td>
+</tr>
+<tr class="even">
+<td>7月5日</td>
+<td style="text-align: left;">フォロワーが急増するも迷惑シェル芸を炸裂するものが現れシェル芸botが12時間のリプ禁止措置を受ける</td>
+<td>面倒</td>
+</tr>
+<tr class="odd">
+<td>6月28日</td>
+<td style="text-align: left;">上田、<a href="https://amzn.to/2K756Yl">フルスクラッチから1日でCMSを作る シェルスクリプト高速開発手法入門 改訂2版</a>出版</td>
+<td>第二版だけどほぼ書き直したんだからもうちょい売れてほしい。</td>
+</tr>
+<tr class="even">
+<td>6月15日　</td>
+<td style="text-align: left;"><a href="/?post=20190615_shellgei_42_links">jus共催 第42回BLACK HOLEシェル芸勉強会</a></td>
+<td><a href="https://horo1717.hatenablog.com/entry/2019/06/19/000535">松江サテライト</a>初開催</td>
+</tr>
+<tr class="odd">
+<td>5月30日</td>
+<td style="text-align: left;"><a href="https://github.com/greymd/ojichat">ojichat</a>がシェル芸botに導入される</td>
+<td>シェル芸botがおじさん化して騒ぎに</td>
+</tr>
+<tr class="even">
+<td>4月27日</td>
+<td style="text-align: left;"><a href="/?post=20190427_shellgei_41_links">jus共催 第41回{ウン,ガク,}{チ,ト,}{,ン}{,コイン}{ブ,}{ラブラ,ハ,}{,イブ}{無,有}罪シェル芸勉強会</a></td>
+<td>タイトルが史上最悪。<a href="https://twitter.com/hid_tori/status/1121989092382633984?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1121989092382633984&amp;ref_url=https%3A%2F%2Fb.ueda.tech%2F%3Fpost%3D20190427_shellgei_41_links">鳥海さんの午前の文字コード講座</a>が大好評のうちに完了。</td>
+</tr>
+<tr class="odd">
+<td>4月24日</td>
+<td style="text-align: left;"><a href="https://twitter.com/kanata201612">@kanata201612</a>氏「<a href="https://amzn.to/32V9D8P">難読化シェル芸の世界</a>」出版</td>
+<td>めでたい</td>
+</tr>
+<tr class="even">
+<td>3月27日</td>
+<td style="text-align: left;"><a href="https://github.com/unkontributors/super_unko">super_unkoリポジトリ</a>がUnkontributorsの配下に移管される</td>
+<td>ライセンスは💩license</td>
+</tr>
+<tr class="odd">
+<td>2月16日</td>
+<td style="text-align: left;"><a href="/?post=20190217_shellgei_40_links">jus共催 第40回記念光明星節シェル芸勉強会</a></td>
+<td>北朝鮮シェル芸炸裂。金3代専用コードポイント。</td>
+</tr>
+<tr class="even">
+<td>1月15日</td>
+<td style="text-align: left;"><a href="https://twitter.com/blacknon_/status/1085161944611311617">@blacknon_氏によってキングウンコが出現</a></td>
+<td>シェル芸botの公式キャラクターだと主張を開始</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2018年">2018年</h2>
+<table class="table table-condensed">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 41%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>日付</th>
+<th style="text-align: left;">出来事</th>
+<th>コメント</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>12月22日</td>
+<td style="text-align: left;"><a href="https://b.ueda.tech/?post=20181223_shellgei_39_links">jus共催 第39回コートなしで自宅から締め出されたりしないでね年末シェル芸勉強会</a></td>
+<td><a href="https://twitter.com/xztaityozx_001">@xztaityozx_001</a>氏の<a href="https://togetter.com/li/1300981">ワタナベ難読化シェル芸</a></td>
+</tr>
+<tr class="even">
+<td>11月3日</td>
+<td style="text-align: left;"><a href="/?post=20181104_shellgei_38_links">jus共催 第38回シ҈҉ェ҈҉ル҈҉芸҈҉勉҈҉強҈҉会</a></td>
+<td>ググラビリティーが悪いタイトルは前回のシェル芸勉強会の「<a href="https://www.slideshare.net/kanata1/unicode-112630484">Unicode結合文字難読化</a> by <a href="https://twitter.com/kanata201612">@kanata201612</a>さん」から</td>
+</tr>
+<tr class="odd">
+<td>9月1日</td>
+<td style="text-align: left;"><a href="https://b.ueda.tech/?post=20180901_shellgei_37_summary">jus共催 第37回シェル芸bot生きてるかどうか分からないけどシェル芸bot向けシェル芸勉強会</a></td>
+<td>タイトルの意味: TwitterのAPI変更でシェル芸bot消滅の危機だった。が、なんとか乗り越え。</td>
+</tr>
+<tr class="even">
+<td>7月13日</td>
+<td style="text-align: left;"><a href="https://togetter.com/li/1246647">シェル芸botが画像の出力に対応</a></td>
+<td>ここからシェル芸が徐々にビジュアル系に</td>
+</tr>
+<tr class="odd">
+<td>7月7日</td>
+<td style="text-align: left;"><a href="/?post=20180708_shellgei_36_summary">jus共催 第36回七夕・・・7は素数じゃないですか（しかも2つ）シェル芸勉強会</a></td>
+<td><a href="https://twitter.com/hid_tori/status/1015602548210716672?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1015602548210716672&amp;ref_url=https%3A%2F%2Fb.ueda.tech%2F%3Fpost%3D20180708_shellgei_36_summary">鳥海さんの午前の部（文字コードの勉強会）が始まる</a></td>
+</tr>
+<tr class="even">
+<td>4月7日</td>
+<td style="text-align: left;"><a href="/?post=20180408_shellgei_35_summary">jus共催 第35回またまためでたいシェル芸勉強会報告</a></td>
+<td><a href="https://twitter.com/grethlen">@grethlen</a>海外進出の壮行会（<a href="https://twitter.com/grethlen/status/982639011427639297?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E982639011427639297&amp;ref_url=https%3A%2F%2Fb.ueda.tech%2F%3Fpost%3D20180408_shellgei_35_summary">スライド</a>）</td>
+</tr>
+<tr class="odd">
+<td>3月17日</td>
+<td style="text-align: left;"><a href="https://b.ueda.tech/?post=2018325_shellgei_34_summary">jus &amp; USP友の会共催 シェル勉強会 @関西（第34回いつも難しい問題ばっかり出す上田が真面目に考えた初心者用シェル芸勉強会）</a></td>
+<td>2回目の大阪開催。東京サテライトが開かれる。</td>
+</tr>
+<tr class="even">
+<td>1月27日</td>
+<td style="text-align: left;"><a href="https://b.ueda.tech/?post=20180128_shellgei_33_summary">jus共催 第33回めでたいシェル芸勉強会</a></td>
+<td>めでたい理由: 横田夫妻がシェル芸婚</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2017年">2017年</h2>
+<table class="table table-condensed">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 41%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>日付</th>
+<th style="text-align: left;">出来事</th>
+<th>コメント</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>12月2日</td>
+<td style="text-align: left;"><a href="https://b.ueda.tech/?post=20171203_shellgei_32_summary">jus共催 第32回全くインスタ映えしないシェル芸勉強会</a></td>
+<td><a href="https://umidori.github.io/shellgei-32th-am/index.html">鳥海さんの変態Perl正規表現が炸裂</a></td>
+</tr>
+<tr class="even">
+<td>10月7日</td>
+<td style="text-align: left;"><a href="https://b.ueda.tech/?post=shellgei_31_summary">jus共催第31回朝からだと疲れるから午後からでええじゃろシェル芸勉強会</a></td>
+<td>大阪で「rmコマンドチキンレース」勃発</td>
+</tr>
+<tr class="odd">
+<td>8月26日</td>
+<td style="text-align: left;"><a href="https://b.ueda.tech/?post=10195">jus共催第30回危念シェル芸勉強会</a></td>
+<td><a href="https://togetter.com/li/1144376">super_unkoリポジトリ出現</a></td>
+</tr>
+<tr class="even">
+<td>8月15日</td>
+<td style="text-align: left;"><a href="https://github.com/greymd/CVE-2017-1000117">脆弱性があると「うんこもりもり」と表示する難読化シェル芸を入れたGitの脆弱性診断ツール</a>がぐれ氏により開発され、<a href="https://togetter.com/li/1141394">真面目なSIerなどで出回る</a>。</td>
+<td>うんこもりもり</td>
+</tr>
+<tr class="odd">
+<td>7月1日</td>
+<td style="text-align: left;"><a href="https://b.ueda.tech/?post=09922">jus共催第29回激しいシェル芸勉強会</a></td>
+<td>某氏のLTでロードアベレージ7万5000を記録</td>
+</tr>
+<tr class="even">
+<td>6月27日</td>
+<td style="text-align: left;">ぐれ氏によって<a href="https://twitter.com/minyoruminyon">シェル芸bot</a>と <a href="https://twitter.com/paiza_run">@paiza_run</a> でツイートを投げ合う無限ループクワインが発見される</td>
+<td>危険</td>
+</tr>
+<tr class="odd">
+<td>6月22日</td>
+<td style="text-align: left;">Twitter上に<a href="https://twitter.com/theoldmoon0602">@theoldmoon0602</a>氏によって「<a href="https://twitter.com/minyoruminyon">シェル芸bot</a>」が出現</td>
+<td>一瞬でシェル芸人の遊び道具に。</td>
+</tr>
+<tr class="even">
+<td>4月22日</td>
+<td style="text-align: left;"><a href="/?post=09632">jus共催第28回シェル芸勉強会</a></td>
+<td>某講師、自分で作って来た問題が難しすぎて解けないという失態。LTで「ロードアベレージ6万」、「Javascriptワンライナー」、「ゾンビプロセスが11561個」、「FORK爆弾24時間熟成」など不穏なキーワードが乱れ飛ぶ。<a href="https://twitter.com/kanata201612">@kanata201612</a>氏、初めて<a href="https://www.slideshare.net/kanata1/ss-75315943?ref=https://raintrees.net/news/95">難読化シェル芸</a>のLTを行う。</td>
+</tr>
+<tr class="odd">
+<td>2月11日</td>
+<td style="text-align: left;"><a href="/?post=09341">jus共催第27回シェル芸勉強会</a></td>
+<td><a href="https://togetter.com/li/1080646">Vimシェル芸</a>が<a href="https://twitter.com/robokinoko">@robokinoko</a>氏によってブームに。鳥海さんがドラゴン曲線ワンライナーからPythonを取り除き、端末に曲線を描くことに成功。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2016年">2016年</h2>
+<table class="table table-condensed">
+<tbody>
+
+
+<td>12月25日</td>
+<td><a href="https://togetter.com/li/1063223">jus共催 第26回シェル芸勉強会及びエクシェル芸勉強会</a></td>
+<td>大阪で漢字対応の巨大文字のLT後、<a href="https://twitter.com/eban/status/813261361622884352">ebanさんが簡単な方法を披露</a>して巨大文字ブーム続行。</td>
+</tr>
+
+
+<td>12月17日</td>
+<td>シェル芸勉強会組で<a href="http://gihyo.jp/magazine/SD/archive/2017/201701">SoftwareDesign 2017年1月号</a>の第一特集を分担執筆。</td>
+<td>あくまで「シェル30本ノック」という題だが、文面に何回もシェル芸と出てくるので、実質シェル芸30本ノック。</td>
+</tr>
+
+<tr>
+<td>12月6日</td>
+<td><a href="https://twitter.com/ayatokura/status/806095968072396800">PowerShell陣営の告知で #シェル芸 というハッシュタグが使われる。</a></td>
+<td>大丈夫なんだろうか？</td>
+</tr>
+
+<tr>
+<td>10月27日</td>
+<td><a href="http://togetter.com/li/1041621">「響け！ユーフォニアム」という文字列がシェル芸人によって弄ばれる</a></td>
+<td>ファン迷惑</td>
+</tr>
+
+<tr>
+<td>9月24日</td>
+<td><a href="http://togetter.com/li/1028373">突然巨大文字・バナー芸が流行る</a></td>
+<td>figlet, toilet, banner等</td>
+</tr>
+
+<tr>
+<td>9月22日</td>
+<td><a href="http://togetter.com/li/1027398">暗号解読遊びがTwitterで勃発</a></td>
+<td>危険暗号が出回る</td>
+</tr>
+
+<tr>
+<td>6月13日</td>
+<td><a href="https://github.com/greymd/cureutils">cureutils</a>がリリースされる</td>
+<td>円滑なプリキュアシェル芸が可能になる。</td>
+</tr>
+
+<tr>
+<td>4月30日</td>
+<td><a href="/?post=08118">jus共催、第22回ゴールデンウィークの存在疑惑シェル芸勉強会</a></td>
+<td>鳥海さんが<pre>alias eval='eval eval'</pre>という危険シェル芸を発明。鳥海さんがワンライナーで<a href="https://youtu.be/e3UPHCrOmzE">ヒルベルト曲線</a>とドラゴン曲線を描く。</td>
+</tr>
+
+<tr>
+<td>2月13日</td>
+<td><a href="http://togetter.com/li/938154">jus共催、第21回未経験者大歓迎！誰でも働けるアットホームな職場ですシェル芸勉強会</a></td>
+<td>初心者向け午前の部で危険シェル芸が次々生まれて会場のマシンが次々撃沈。「誰でも働けるアットホームな職場」が改めて地雷ワードだと皆で確認。</td>
+</tr>
+
+</tbody>
+</table>
+<h2>2015年</h2>
+<table class="table table-condensed">
+<tbody>
+<tr>
+<td>12月22日</td>
+<td>ぐれ氏「<a href="http://b.hatena.ne.jp/entry/qiita.com/greymd/items/a4ecf8e70f11eb1e5f72">たのしいな</a>」</td>
+<td>たのしいな</td>
+</tr>
+
+<tr>
+<td>10月31日</td>
+<td><a href="http://togetter.com/li/893755">第19回シェル芸3周年記念勉強会</a></td>
+<td><a href="https://twitter.com/mutz0623">むっつー氏</a>が<a href="http://www.slideshare.net/mutz0623">trueコマンドに0以外の終了ステータスを出させるという偉業を達成。</a></td>
+</tr>
+
+<tr>
+<td>10月26日</td>
+<td><a href="http://togetter.com/li/893396">マイナンバーシェル芸事件</a></td>
+<td>マイナンバーのクラックが試みられる。当然、クラックはできないので冗談の範疇だと信じたい。</td>
+</tr>
+
+<tr>
+<td>8月29日</td>
+<td><a href="http://togetter.com/li/867184">第18回ニンニク入れますかシェル芸勉強会</a></td>
+<td>午前の部開始。ぐれ氏の<a href="http://b.hatena.ne.jp/entry/www.slideshare.net/YasuhiroYamada1/arduino-52210988">例のLT</a>で会場が笑いすぎで腹痛。</td>
+</tr>
+
+<tr>
+<td>7月24日</td>
+<td><a href="http://togetter.com/li/851933">粋な町人の間でシェルしぐさが流行る</a></td>
+<td>江戸しぐさを皮肉るつもりだったがあんまり皮肉った感じにはならず企画倒れムード。</td>
+</tr>
+
+<tr>
+<td>6月18日</td>
+<td><a href="https://www.youtube.com/watch?v=GOX2xRYeyR4">第17回ジュンク堂はシェル芸が乗っ取った勉強会</a></td>
+<td>シェルプログラミング実用テクニックの出版記念。ジュンク堂池袋本店にて。</td>
+</tr>
+
+<tr>
+<td>5月15日</td>
+<td><a href="/?page=05787">シェルプログラミング実用テクニック</a>出版</td>
+<td>よりシェル芸っぽい本。</td>
+</tr>
+
+<tr>
+<td>4月18日</td>
+<td><a href="http://togetter.com/li/810033">第16回春だからログ解析するぞシェル芸勉強会</a></td>
+<td><a href="http://papiro.hatenablog.jp/entry/2015/04/18/222408">福岡サテライトがはじめて開設される。</a></td>
+</tr>
+</tbody>
+</table>
+<h2>2014年</h2>
+<table class="table table-condensed">
+<tbody>
+<tr>
+<td>12月13日</td>
+<td><a href="http://togetter.com/li/757291">第14回東京居残りシェル芸勉強会</a></td>
+<td>鳥取で同時開催の日本UNIXユーザ会共催シェルスクリプトワークショップと中継。</td>
+</tr>
+<tr>
+<td>10月5日</td>
+<td><a href="http://togetter.com/li/727412">第13回危険でない方のシェル芸勉強会</a></td>
+<td>初めて<a href="http://www.kunst1080.net/entry/2014/10/05/000541">大阪サテライト</a>が開設される。</td>
+</tr>
+<tr>
+<td>9月25日</td>
+<td><a href="/?post=03967">ShellShockが起きる</a></td>
+<td>なぜか「bashなんかなくなれ」と上田が罵声を浴びる on Twitter。</td>
+</tr>
+<tr>
+<td>8月20日</td>
+<td><a href="http://togetter.com/li/709172">危険シェル芸の発生</a></td>
+<td>: () { : | : &amp; } ; :</td>
+</tr>
+
+<tr>
+<td>8月7日</td>
+<td><a href="http://ja.uncyclopedia.info/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E8%8A%B8">アンサイクロペディアにシェル芸のページが出現</a></td>
+<td>同じ頃、ウィキペディアのシェル芸のページはUSP友の会のページに併合されて消える。</td>
+</tr>
+
+<tr>
+<td>8月2日</td>
+<td><a href="http://togetter.com/li/701509">第12回本当は怖くないシェル芸勉強会</a></td>
+<td>鳥海さんがバックスラッシュを多用した<a href="https://twitter.com/ryuichiueda/status/495494677366202368">素数列挙変態ワンライナー</a>を披露して会場が恐怖のズンドコに。</td>
+</tr>
+
+<tr>
+<td>7月2日</td>
+<td><a href="/?page=03237">シェルスクリプト高速開発手法入門</a>が発売される</td>
+<td>表紙に「シェル芸を極めよ」と書いてあって失禁。</td>
+</tr>
+
+
+<tr>
+<td>6月14日</td>
+<td><a href="http://togetter.com/li/680441">jus & USP友の会共催 シェルワンライナー勉強会@関西（第11回シェル芸勉強会）</a></td>
+<td>大阪で初開催。jusさんと一緒にやるということで「シェル芸」という言葉は控えめに使用。なお2016年現在は(ry。このころ、<a href="https://twitter.com/eban">@eban</a>さんに捕捉されたっぽい。東京サテライトがあって4人集まったっぽい。</td>
+</tr>
+
+<tr>
+<td>3月26日</td>
+<td>sed等で強引にエクセルファイルからデータを抜き出す技に「<a href="https://twitter.com/nullpopopo/status/448832135101968384">エクシェル芸</a>」と名前が付く。</td>
+<td><a href="https://twitter.com/nullpopopo">@nullpopopo</a>氏より。</td>
+</tr>
+
+<tr>
+<td>2月15日</td>
+<td><a href="http://togetter.com/li/631003">第9回寒中シェル芸勉強会</a></td>
+<td>第4回〜第8回のまとめが見当たらないが、この頃にはxargsが乱用されていた模様。</td>
+</tr>
+
+</tbody>
+</table>
+<p> </p>
+<h2>2013年</h2>
+<table class="table table-condensed">
+<tbody>
+
+<tr>
+<td>11月18日</td>
+<td>開眼シェルスクリプトの連載が<a href="http://gihyo.jp/magazine/SD/archive/2013/201312">SoftwareDesign 2013年12月号</a>で終了。</td>
+<td>最初6ヶ月という話だったが2年、24回続く。</td>
+</tr>
+
+<tr>
+<td>8月24日</td>
+<td><a href="http://www.slideshare.net/ryuichiueda/20130824">第6回チャンピオンシップシェル芸ランナー勉強会</a></td>
+<td><a href="http://ll.jus.or.jp/2013/">LLイベント（LLまつり）</a>内でチュートリアルとして実施。bashはlightweight languageだと主張。（そんなに主張したいわけではない。）</td>
+</tr>
+
+<tr>
+<td>2月16日</td>
+<td><a href="http://togetter.com/li/457159">第3回シェル芸爆破デスマッチ勉強会</a></td>
+<td>sed縛りのシンプルな問題を扱う。この頃からシェル芸勉強会という名前で定着。</td>
+</tr>
+
+</tbody>
+</table>
+<h2>2012年</h2>
+<table class="table table-condensed">
+<tbody>
+<tr>
+<td>12月8日</td>
+<td><a href="http://togetter.com/li/419987">第2回シェル芸人養成勉強会</a></td>
+<td>現在は第2回シェル芸勉強会と呼称。まとめが残っている一番古いもので、出てくるコマンドが少ない。上田=女子高生というイメージが定着（どうでもいい）</td>
+</tr>
+<tr>
+<td>10月27日</td>
+<td><a href="https://heartbeats.jp/hbstudy/2012/10/hbstudy38.html">hbstudy#38</a></td>
+<td>現在は第1回シェル芸勉強会と呼称。<span style="color:red">「シェル芸」という言葉が初めて使われる。</span></td>
+</tr>
+</tbody>
+</table>
+<h2>2011年</h2>
+<table class="table table-condensed">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 41%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>日付</th>
+<th style="text-align: left;">出来事</th>
+<th>コメント</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>12月17日</td>
+<td style="text-align: left;">「開眼シェルスクリプト」が<a href="http://gihyo.jp/magazine/SD/archive/2012/201201">SoftwareDesign 2012年1月号</a>から連載開始。</td>
+<td>ふざけたい上田と、硬派な紙面作りをしたい編集Y様との長期に渡る「ふざけているとふざけていないの線引きの戦い」が始まる（2016年12月現在継続中）。</td>
+</tr>
+<tr class="even">
+<td>5月28日</td>
+<td style="text-align: left;">USP友の会で「解いて学ぶシェルスクリプトワークショップ」が開催される。講師は鳥海さん。</td>
+<td>「画面に80個の=を出力するプログラム」をひたすらたくさん考える、という試み。シェル芸勉強会の原型。</td>
+</tr>
+</tbody>
+</table>
+<h2>下書き</h2>
+<ul>
+    <li>第10回記念シェル芸勉強会: http://togetter.com/li/651837</li>
+    <li>base64で会話</li>
+</ul>
+
+          <br />
+          <!-- google ad -->
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-7242808947152948"
+               data-ad-slot="6249127784"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+          <!-- google ad -->
+
+          <br />
+	  <p id="prev-next-nav"></p>
+        </div>
+	<div class="col-md-4" id="widgets">
+          <aside>
+            <script src="https://apis.google.com/js/platform.js"></script>
+            <div class="g-ytsubscribe" data-channel="ryuichiueda" data-layout="full" data-count="default"></div>
+            <div class="g-ytsubscribe" data-channelid="UCNnuBjHrb2UYBUi0I5otmjQ" data-layout="full" data-count="default"></div>
+            <br />
+          </aside>
+          <aside>
+            	    <a href="https://ja.wikipedia.org/wiki/%E4%B8%8A%E7%94%B0%E9%9A%86%E4%B8%80"><i class="fa fa-wikipedia-w fa-3x"></i></a>
+	    	    <a href="https://twitter.com/ryuichiueda"><i class="fa fa-twitter-square fa-3x"></i></a>
+	    	    <a href="https://github.com/ryuichiueda"><i class="fa fa-github-square fa-3x"></i></a>
+	    	    <a href="https://www.slideshare.net/ryuichiueda"><i class="fa fa-slideshare fa-3x"></i></a>
+	    	    <a href="https://www.facebook.com/%E4%B8%8A%E7%94%B0-%E9%9A%86%E4%B8%80-675930229170437/"><i class="fa fa-facebook-squar fa-3x"></i></a>
+	    	    <a href="https://www.linkedin.com/in/%E9%9A%86%E4%B8%80-%E4%B8%8A%E7%94%B0-81391649"><i class="fa fa-linkedin-square fa-3x"></i></a>
+	    	    <a href="https://www.instagram.com/ryuichiueda/"><i class="fa fa-instagram fa-3x"></i></a>
+	    	    <a href="https://www.researchgate.net/profile/Ryuichi_Ueda"><i class="fa fa-graduation-cap fa-3x"></i></a>
+	    	    <a href="https://peing.net/ja/ryuichiueda"><i class="fa fa-question fa-3x"></i></a>
+	              </aside>
+          <br />
+          <aside id="last-read"></aside>
+          <br />
+          <aside id="tag-cloud"></aside>
+          <br />
+          <aside id="last-articles"></aside>
+          <br />
+          <aside id="rank-articles"></aside>
+        </div>
+      </div>
+      <div class="row fixed-bottom" id="cookiemention">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+		    このサイトではGoogle AdSenseやその他ソーシャルボタンのためにCookieを使用しています。もし同意いただけない場合はブラウザでクッキーを無効にして閲覧をお願いします。This site uses cookies for Google AdSense and some social buttons. If you cannot accept our use of cookies, please disable cookies on your browser.
+              <button type="button" class="btn btn-success btn-sm" id="cookieok">Got It.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>(C) Ryuichi Ueda <a href="/?page=privacy">このサイトについて</a></p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--<script src="/bsview/jquery.bs.gdpr.cookies.js"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="/bsview/main.js"></script>
+  </body>
+</html>

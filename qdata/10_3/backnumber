@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Software Design バックナンバー｜gihyo.jp … 技術評論社</title>
+<meta name="description" content="" />
+<meta name="keywords" content="技術評論社,gihyo.jp," />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@gihyojp"/>
+<meta property="og:title" content="Software Design バックナンバー" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://gihyo.jp/magazine/SD/backnumber" />
+<meta property="og:image" content="https://gihyo.jp/assets/images/" />
+<meta property="og:site_name" content="gihyo.jp" />
+<meta property="fb:app_id" content="185201618169441" />
+
+<script type="application/ld+json">
+{"@context":"http:\/\/schema.org","@type":"Article","headline":"Software Design バックナンバー","image":{"@type":"ImageObject","url":"http:\/\/image.gihyo.co.jp\/assets\/images\/","height":null,"width":null},"datePublished":"2007-01-04T14:55:06+09:00","dateModified":"2015-01-23T16:52:48+09:00","author":{"@type":"Person","name":""},"publisher":{"@type":"Organization","name":"株式会社技術評論社","logo":{"@type":"ImageObject","url":"http:\/\/image.gihyo.co.jp\/assets\/templates\/gihyojp2007\/image\/gihyo_logo.png","width":292,"height":54}},"description":""}
+</script>
+<base href="/" />
+<link rel="canonical" href="https://gihyo.jp/magazine/SD/backnumber" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" /><link rel="icon" href="/favicon.svg" size="any" type="image/svg+xml" />
+<link rel="publisher" href="https://plus.google.com/113010907831932672815" />
+<link rel="alternate" type="application/rss+xml" title="gihyo.jp：Software Desgin RSS1.0" href="http://gihyo.jp/magazine/SD/feed/rss1" />
+<link rel="alternate" type="application/rss+xml" title="gihyo.jp：Software Desgin RSS2.0" href="http://gihyo.jp/magazine/SD/feed/rss2" />
+<link rel="alternate" type="application/atom+xml" title="gihyo.jp：Software Desgin Atom" href="http://gihyo.jp/magazine/SD/feed/atom" />
+<!--[if lt IE 9]>
+<script src="//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+<style>*{font-size:100%;list-style:none;margin:0;padding:0}@font-face{font-family:"gihyojp";src:local("Hiragino Sans"),local("BIZ UDゴシック"),local("メイリオ")}@font-face{font-family:"gihyojp";src:local(-apple-system),local(BlinkMacSystemFont),local("Segoe UI"),local("Roboto"),local("Ubuntu"),local(system-ui);unicode-range:U+0000-05C7}body{color:#333;font-family:gihyojp,sans-serif;font-size:12px;line-height:1.4;text-align:center;-webkit-text-autospace:ideograph-numeric ideograph-alpha;-moz-text-autospace:ideograph-numeric ideograph-alpha;-ms-text-autospace:ideograph-numeric ideograph-alpha;text-autospace:ideograph-numeric ideograph-alpha}a{color:#05C;text-decoration:none;word-wrap:break-word}a:visited{color:#3388cc}.clearfix{display:block}.clearfix:after{clear:both;content:"";display:block;height:0}img{border:none;vertical-align:top;-ms-interpolation-mode:bicubic}#wrapper{position:relative;width:985px;margin:0 auto;text-align:left}#header{position:relative;-webkit-text-size-adjust:100%;-ms-interpolation-mode:bicubic}#header:after{clear:both;content:'';display:block;height:0}#header #logo{padding:22px 0}#header #logo a{display:inline-block}#header .utility{border-top:3px solid #0068B7;position:absolute;right:0;top:0}#header ul{display:block;float:left;left:0px;padding-top:22px;top:0px}#header ul li{border-collapse:separate;display:block;float:left;height:21px;width:auto}#header ul li a{display:block;-webkit-font-feature-settings:'kern','liga','pwid';-moz-font-feature-settings:'kern','liga','pwid';font-feature-settings:'kern','liga','pwid';height:21px;text-rendering:optimizelegibility}#header #shortcut li a{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAMAAACg0N8BAAAAS1BMVEX///8TkxwZniPw+PEaoSRGtE7x+fGY0ZxuwHRtv3O13bjU7dY+pEUnpDASkRsYnCEXmiAUlh4opjIwnziLzZDS6tSo2qwimioVmB/5voWQAAAAAXRSTlMAQObYZgAAADRJREFUeF4VxcUBwDAQxECZIczpv1LfzkNiDsh6PZpzXwcOU+CXxi6Vzdzg/fIC8ZwwKasDUJQCMERw8roAAAAASUVORK5CYII=) no-repeat 15px center;background-size:auto 5px;color:#333;display:block;font-size:11px;font-weight:bold;line-height:21px;padding:0 15px 0 22px;white-space:nowrap;width:auto}#header #searchForm{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAYCAMAAAAmopZHAAABelBMVEX///+ZmZm/v7/////y8vLl5eXv7+/m5ua2trampqafn5/5+fnS0tKsrKwzfcmzs7Pf39/s7Oy5ubkqcbo5hdP39/fz+P0ud8E0fsuPvu4jaK9llMQ8idjn5+fP4/fP4vaNvOzGxsbH2OlsqOUnbrZ9s+pCkeLZ2dlan+bn8fs5htQxe8bJycn6+vqenp6Nve07iNeKu+309PSCqNDx9flGkuBQktU8h9Nbj8RnpOFIkdsveMO7u7s7htJPkdRno+E4g9F8seg+i9s5hdKwy+ZajsMsdb4karH8/PyCqdDExMTk7fYzfso3gs8xesVHkNv9/f3x9vo2gc3KysrL3vHc3Nw6fsM4hNGgv9/o6OhMld/Nzc1mpugqcrtGkuFKk94+i9oyfcigv95KlN/t7e1ZjcI8itna6PcyfMhbkMVJk97MzMw7h9ZIkt26uro7iNYsdL1+s+ptqeabxfC/1u0tdb/w8PAsdL58suiwy+c2gc45fMHa6fdtqedp8vz/AAAAAXRSTlMAQObYZgAAAVBJREFUeF5tkGVvK0EMRccDyxBmZigzMzMz9zEzv//e6U7SpGrOJ+tcy7oycijawFHTFDXDVKjztkkXubANWXZhjQ+NbQBNJuVE8h/RPQC47lXQ3IHuwsVJ18A3ggFcD1fkwFkpnPo1PPjqt66CKbwNNukufe3MZ0d8oYNVvvbM8QBGuRDu/Pz/8oUv9P1IBziteTnRn8p/uZ3pOrQWXhMTcHvNJ99PZ99cxSp/qufzxAbcI7zr5bvJzdjHyroVzC0TDTAVNTGZGPfNTu1Yo95Ixg1gOD4NGt2rWmvXG0HvYpR4oIM5ngIvOvf35ydvLhLt4zUx8zuFdvmob98MPe/NEK5BiW85fkkBUIs6IUT2wD1jSEAV4Jg2CBqvcxumEB1YaQ62JLbfhvGKwRh7FCD/MXOI/5BEgOq091BK/byJCCT0BOkDQBtDLQLGQa0DegfVNig5kouP/AAAAABJRU5ErkJggg==) no-repeat 0 26px;background-size:auto 12px;display:block;float:left;height:20px;margin-left:15px;padding-top:20px;padding-left:15px;width:auto}#header #searchForm #searchFormKeyword{background:#FFF;border:1px solid #CCC;border-radius:2px;-moz-box-sizing:border-box;box-sizing:border-box;font-size:12px;height:24px;line-height:2;margin-right:4px;padding:0 0.5em;position:relative;width:267px}.submitButton{background:#33A61D;border:1px solid #098a13;border-radius:2px;-moz-box-sizing:border-box;box-sizing:border-box;color:#FFF;cursor:pointer;display:block;float:right;font-weight:bold;line-height:2;padding:0 0.8em;text-align:center;text-shadow:0 0 2px #098a13;-webkit-appearance:none}#header #searchForm #searchFormSubmit{font-size:11px}#header #headerBanner01,#header #headerBanner02{margin-bottom:15px}#header #headerBanner01{float:left}#header #headerBanner02{float:right}.headCategoryNavigation{display:block;line-height:1;margin-bottom:4px;-ms-interpolation-mode:bicubic;position:relative;-webkit-text-size-adjust:100%;width:100%}.headCategoryNavigation .main{background:#0068B7;display:block;width:100%}.headCategoryNavigation .main li{float:left;display:block;height:34px;margin-top:4px;width:auto}.headCategoryNavigation .main li:first-child{margin-left:5px}.headCategoryNavigation .main .change{float:right}.headCategoryNavigation .main li a{color:#FBFBFF;display:block;-webkit-font-feature-settings:"kern", "liga", "pwid";-moz-font-feature-settings:"kern", "liga", "pwid";font-feature-settings:"kern", "liga", "pwid";font-size:12px;font-weight:bold;height:34px;line-height:30px;padding:0 20px;text-align:center;text-rendering:optimizelegibility;text-shadow:0 0 2px #144b83;width:auto}.headCategoryNavigation .main .change a{font-weight:normal;padding-left:0}.headCategoryNavigation .main .change a:before{content:'▶ ';font-size:0.5em;vertical-align:middle}#topicPath{-webkit-font-feature-settings:"kern", "liga", "palt";-moz-font-feature-settings:"kern", "liga", "palt";font-feature-settings:"kern", "liga", "palt";line-height:1;overflow:hidden;padding:0 10px 15px 10px;position:relative;text-overflow:ellipsis;text-rendering:optimizelegibility;vertical-align:bottom;white-space:pre}#main{float:left;width:818px}#main #primary{float:left;font-size:117%;width:505px}#main #secondary{float:right;width:302px}#sub{float:right;width:157px}.readingContent01 p{margin:0 0 1em 0;line-height:1.9}
+</style>
+
+<!--[if lt IE 9]>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.4/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<![endif]-->
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+<script defer type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/33530947/magazine-bigbanner', [728,90], 'div-gpt-ad-1369887592403-0').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-centertextlink1', [300,16], 'div-gpt-ad-1369887592403-2').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-centertextlink2', [300,16], 'div-gpt-ad-1369887592403-3').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-rectangle1', [300,300], 'div-gpt-ad-1369887592403-4').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-rectangle2', [300,300], 'div-gpt-ad-1369887592403-5').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-mainregularbanner', [468,60], 'div-gpt-ad-1369887592403-7').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-textlink1', [485,16], 'div-gpt-ad-1369887592403-8').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-textlink2', [485,16], 'div-gpt-ad-1369887592403-9').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-articlerectangle', [336,280], 'div-gpt-ad-1369887592403-10').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-delimiterregularbanner', [468,60], 'div-gpt-ad-1369887592403-11').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-delimiterrectangle', [300,300], 'div-gpt-ad-1369887592403-12').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-minibanner', [243,90], 'div-gpt-ad-1369887592403-13').addService(googletag.pubads());
+googletag.defineSlot('/33530947/magazine-smallrectangle', [300,100], 'div-gpt-ad-1369887592403-14').addService(googletag.pubads());
+
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+<script defer>var textAd = function() {setTimeout(function(){
+  console.log('pri');
+  var obsPTA = new MutationObserver(function(records) {
+    records.forEach(function(recod) {
+      Array.from(recod.addedNodes).filter(function($node) {
+        if ($node.nodeName === 'IFRAME') {
+          return true;
+        }
+        return false;
+      }).forEach(function($node) {
+        if ($node.contentWindow.document.readyState === 'complete') {
+          console.log('.');
+          tadclip($node);
+          return;
+        }
+        console.log(',');
+        $node.contentWindow.document.addEventListener('DOMContentLoaded', function(){setTimeout(tadclip($node), 50)});
+        return;
+      });
+    });
+  });
+
+  var tadclip = function ($obj) {
+    var $base, $body, $style, $tmp;
+    $obj.parentNode.parentNode.style.height = 'auto';
+    $base = $obj.contentWindow.document.querySelector('html');
+    $body = $obj.contentDocument.querySelector('body');
+    if (typeof $base === 'undefined' || typeof $body === 'undefined') {
+      return;
+    }
+    $style = document.createElement('style');
+    $style.textContent = 'body{font-family:Arial,sans-serif;font-size:14px;line-height:18px;padding-top:10px}span{display:block;border-bottom:1px solid #E5E5E5;padding-bottom:10px}a{color:#05C;text-decoration:none;padding:4px 0}a span{border-bottom:none;padding-bottom:2px}b{padding:0 0 0 18px;background:url(/assets/templates/gihyojp2007/image/pr13x13.gif) 0px 0 no-repeat}a:hover{color:#38C;text-decoration:underline}body>br{display:none}';
+    $body.insertBefore($style, $body.firstChild);
+    $tmp = $body.querySelector('.GoogleActiveViewElement');
+    if (typeof $tmp === 'object' && $tmp !== null && $tmp.lastElementChild.nodeName === 'BR') {
+      $tmp.removeChild($tmp.lastElementChild);
+    }
+    $tmp.style.display = 'inline-block';
+    $tmp.style.width = '100%';
+    h = $base.offsetHeight;
+    $obj.height = h;
+    $style = void 0;
+    $tmp = void 0;
+    $body = void 0;
+    $base = void 0;
+    $obj = void 0;
+    return;
+  }
+
+  var $target = document.querySelector('#primaryTopTextPr .textAdList01, #primaryTopTextPr .textAdList02');
+  if (typeof $target === 'object' && $target !== null) {
+    $target.querySelectorAll('.is-banner').forEach(function($node){$node.style.height = '0';});
+    var $ptt = document.getElementById('primaryTopTextPr');
+    if (typeof $ptt === 'object' && $ptt !== null) {
+      $ptt.style.height = 'auto';
+      $ptt = void 0;
+    }
+
+    obsPTA.observe($target, {childList: true, subtree: true});
+    $target = void 0;
+
+    setTimeout(function(){
+      obsPTA.disconnect();
+      document.querySelectorAll('#primaryTopTextPr .is-banner > script').forEach(function($node) {
+        $node.parentNode.parentNode.removeChild($node.parentNode);
+        $node = void 0;
+      });
+    }, 5000);
+  }
+}, 50);
+setTimeout(function(){
+  console.log('sec');
+  var obsSTA = new MutationObserver(function(records) {
+    records.forEach(function(recod) {
+      Array.from(recod.addedNodes).filter(function($node) {
+        if ($node.nodeName === 'IFRAME') {
+          return true;
+        }
+        return false;
+      }).forEach(function($node) {
+        if ($node.contentWindow.document.readyState === 'complete') {
+          console.log(':');
+          ctadclip($node);
+          return;
+        }
+        console.log(';');
+        $node.contentWindow.document.addEventListener('DOMContentLoaded', function(){setTimeout(ctadclip($node), 50)});
+        return;
+      });
+    });
+  });
+
+  var ctadclip = function ($obj) {
+    var $base, $body, $style, $tmp;
+    $obj.parentNode.parentNode.style.height = 'auto';
+    $base = $obj.contentWindow.document.querySelector('html');
+    $body = $obj.contentDocument.querySelector('body');
+    if (typeof $base === 'undefined' || typeof $body === 'undefined') {
+      return;
+    }
+    $style = document.createElement('style');
+    $style.textContent = 'body{font-family:Arial,sans-serif;font-size:12px;line-height:16px;padding-top:4px;text-rendering:optimizeLegibility;-webkit-font-feature-settings:"kern","liga","palt";-moz-font-feature-settings:"kern","liga","palt";font-feature-settings:"kern","liga","palt"}span{display:block}a{color:#05C;text-decoration:none;font-size:14px;line-height:19px}b{border-bottom:none;padding-bottom:2px}b{padding:6px 0 0 15px;background:url(/assets/templates/gihyojp2007/image/bg/pr_02.gif) 0px 10px no-repeat}a:hover{color:#38C;text-decoration:underline}body>br{display:none}';
+    $body.insertBefore($style, $body.firstChild);
+    $tmp = $body.querySelector('.GoogleActiveViewElement');
+    if (typeof $tmp === 'object' && $tmp !== null && $tmp.lastElementChild.nodeName === 'BR') {
+      $tmp.removeChild($tmp.lastElementChild);
+    }
+    $tmp.style.display = 'inline-block';
+    $tmp.style.width = '100%';
+    h = $base.offsetHeight;
+    $obj.height = h;
+    $style = void 0;
+    $tmp = void 0;
+    $body = void 0;
+    $base = void 0;
+    $obj = void 0;
+    return;
+  }
+
+  var $target = document.querySelector('#secondaryTopTextPr .prList01');
+  if (typeof $target === 'object' && $target !== null) {
+    $target.querySelectorAll('.is-banner').forEach(function($node){$node.style.height = '0';});
+    var $stt = document.getElementById('secondaryTopTextPr');
+    if (typeof $stt === 'object' && $stt !== null) {
+      $stt.style.height = 'auto';
+      $stt = void 0;
+    }
+
+    obsSTA.observe($target, {childList: true, subtree: true});
+    $target = void 0;
+
+    setTimeout(function(){
+      obsSTA.disconnect();
+      document.querySelectorAll('#secondaryTopTextPr .is-banner > script').forEach(function($node) {
+        $node.parentNode.parentNode.removeChild($node.parentNode);
+        $node = void 0;
+      });
+    }, 5000);
+  }
+}, 50);
+};if (document.readyState === 'complete') {textAd();} else {document.addEventListener('DOMContentLoaded', function(){textAd();});}</script></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+<div id="wrapper">
+
+<header role="banner">
+<div id="header" itemscope itemtype="http://schema.org/WPHeader">
+
+<h1 id="logo"><a href="/book"><img src="/assets/templates/gihyojp2007/image/gihyo_logo.png" alt="技術評論社" width="146" height="27" /></a></h1>
+
+<div class="utility">
+
+<ul id="shortcut">
+
+<li class="num02"><a href="/site/inquiry">お問い合わせ</a></li>
+<li class="num03"><a href="/site/profile">会社案内</a></li>
+</ul>
+
+<div id="searchForm">
+<form action="/result"><input name="type" type="hidden" value="book" /><input id="searchFormKeyword" name="query" type="text" value="検索したい用語を入力" /><input id="searchFormSubmit" class="submitButton" value="検索" type="submit" /></form>
+</div>
+
+</div>
+
+<div id="headerBanner01"><div id="div-gpt-ad-1369887592403-0" style="width:728px; height:90px; margin:0 auto" class="is-banner">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1369887592403-0'); });
+</script>
+</div>
+</div>
+<div id="headerBanner02"><div id="div-gpt-ad-1369887592403-13" style="width:243px; height:90px; margin:0 auto" class="is-banner">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1369887592403-13'); });
+</script>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="bookNavigation" class="headCategoryNavigation">
+<ul class="main clearfix">
+<li><a href="/book" title="本を探す">本を探す</a></li>
+<li><a href="/book/list" title="新刊書籍">新刊書籍</a></li>
+<li class="current"><a href="/magazine" title="雑誌">雑誌</a></li>
+<li><a href="/book/dennou" title="電脳会議">電脳会議</a></li>
+<li class="change"><a href="/" title="gihyo.jp">gihyo.jp</a></li>
+<li class="change"><a href="https://gihyo.jp/dp" title="Gihyo Digital Publishing">電子書籍</a></li>
+</ul>
+</div>
+
+<div id="topicPath" itemprop="breadcrumb">
+<script type="text/javascript">
+
+</script><span class="B_crumbBox"><span class="B_firstCrumb"><a href="/" class="B_homeCrumb" title="トップページ">gihyo.jp</a></span> &raquo; <a href="/book" class="B_crumb" title="書籍案内">書籍案内</a> &raquo; <a href="/magazine" class="B_crumb" title="定期刊行物一覧">定期刊行物一覧</a> &raquo; <a href="/magazine/SD" class="B_crumb" title="Software Design">Software Design</a> &raquo; <span class="B_currentCrumb">Software Design バックナンバー</span></span>
+</div>
+</header>
+<div id="content" class="clearfix">
+<div id="main">
+<article role="main">
+<div id="primary">
+<h1 class="mainTitle01"><a href="/magazine/SD">Software Design</a></h1>
+<h2 class="subTitle01">Software Design バックナンバー</h2>
+<div id="newsHotLine" class="sectionBlock01 main">
+
+<div  class="pageSwitch01 pageSwitch02">
+<p class="back"></p>
+<p class="next"><a href="magazine/SD/backnumber?start=20"><img src="/assets/templates/gihyojp2007/image/image_link/pageSwitch_next.gif" alt="次のページへ" width="81" height="13" class="buttons" /></a></p>
+</div>
+
+<ul class="magazineList01 bookList01">
+
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2021/202101"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2021/thumb/TH64_642101.jpg" data-srcset="/assets/images/cover/2021/thumb/TH64_642101.jpg 1x, /assets/images/cover/2021/thumb/TH128_642101.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2021<wbr/>年<wbr/>1<wbr/>月号" title="［表紙］Software Design 2021<wbr/>年<wbr/>1<wbr/>月号" /><noscript><img src="/assets/images/cover/2021/thumb/TH64_642101.jpg" width="64" height="90" alt="［表紙］Software Design 2021<wbr/>年<wbr/>1<wbr/>月号" title="［表紙］Software Design 2021<wbr/>年<wbr/>1<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2021/202101">Software Design 2021<wbr/>年<wbr/>1<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年12月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202012"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642012.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642012.jpg 1x, /assets/images/cover/2020/thumb/TH128_642012.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>12<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>12<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642012.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>12<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>12<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202012">Software Design 2020<wbr/>年<wbr/>12<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年11月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202011"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642011.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642011.jpg 1x, /assets/images/cover/2020/thumb/TH128_642011.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>11<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>11<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642011.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>11<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>11<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202011">Software Design 2020<wbr/>年<wbr/>11<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年10月17日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202010"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642010.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642010.jpg 1x, /assets/images/cover/2020/thumb/TH128_642010.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>10<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>10<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642010.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>10<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>10<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202010">Software Design 2020<wbr/>年<wbr/>10<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年9月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202009"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642009.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642009.jpg 1x, /assets/images/cover/2020/thumb/TH128_642009.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>9<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>9<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642009.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>9<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>9<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202009">Software Design 2020<wbr/>年<wbr/>9<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年8月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202008"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642008.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642008.jpg 1x, /assets/images/cover/2020/thumb/TH128_642008.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>8<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>8<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642008.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>8<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>8<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202008">Software Design 2020<wbr/>年<wbr/>8<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年7月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202007"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642007.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642007.jpg 1x, /assets/images/cover/2020/thumb/TH128_642007.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>7<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>7<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642007.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>7<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>7<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202007">Software Design 2020<wbr/>年<wbr/>7<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年6月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202006"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642006.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642006.jpg 1x, /assets/images/cover/2020/thumb/TH128_642006.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>6<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>6<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642006.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>6<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>6<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202006">Software Design 2020<wbr/>年<wbr/>6<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年5月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202005"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642005.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642005.jpg 1x, /assets/images/cover/2020/thumb/TH128_642005.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>5<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>5<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642005.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>5<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>5<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202005">Software Design 2020<wbr/>年<wbr/>5<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年4月17日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202004"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642004.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642004.jpg 1x, /assets/images/cover/2020/thumb/TH128_642004.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>4<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>4<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642004.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>4<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>4<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202004">Software Design 2020<wbr/>年<wbr/>4<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年3月18日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202003"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642003.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642003.jpg 1x, /assets/images/cover/2020/thumb/TH128_642003.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>3<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>3<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642003.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>3<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>3<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202003">Software Design 2020<wbr/>年<wbr/>3<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年2月18日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202002"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642002.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642002.jpg 1x, /assets/images/cover/2020/thumb/TH128_642002.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>2<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>2<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642002.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>2<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>2<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202002">Software Design 2020<wbr/>年<wbr/>2<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年1月18日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202001"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642001.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642001.jpg 1x, /assets/images/cover/2020/thumb/TH128_642001.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>1<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>1<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642001.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>1<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>1<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202001">Software Design 2020<wbr/>年<wbr/>1<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2019年12月18日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2019/201912"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2019/thumb/TH64_641912.jpg" data-srcset="/assets/images/cover/2019/thumb/TH64_641912.jpg 1x, /assets/images/cover/2019/thumb/TH128_641912.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>12<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>12<wbr/>月号" /><noscript><img src="/assets/images/cover/2019/thumb/TH64_641912.jpg" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>12<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>12<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2019/201912">Software Design 2019<wbr/>年<wbr/>12<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2019年11月18日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2019/201911"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2019/thumb/TH64_641911.jpg" data-srcset="/assets/images/cover/2019/thumb/TH64_641911.jpg 1x, /assets/images/cover/2019/thumb/TH128_641911.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>11<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>11<wbr/>月号" /><noscript><img src="/assets/images/cover/2019/thumb/TH64_641911.jpg" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>11<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>11<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2019/201911">Software Design 2019<wbr/>年<wbr/>11<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2019年10月18日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2019/201910"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2019/thumb/TH64_641910.jpg" data-srcset="/assets/images/cover/2019/thumb/TH64_641910.jpg 1x, /assets/images/cover/2019/thumb/TH128_641910.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>10<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>10<wbr/>月号" /><noscript><img src="/assets/images/cover/2019/thumb/TH64_641910.jpg" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>10<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>10<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2019/201910">Software Design 2019<wbr/>年<wbr/>10<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2019年9月18日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2019/201909"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2019/thumb/TH64_641909.jpg" data-srcset="/assets/images/cover/2019/thumb/TH64_641909.jpg 1x, /assets/images/cover/2019/thumb/TH128_641909.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>9<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>9<wbr/>月号" /><noscript><img src="/assets/images/cover/2019/thumb/TH64_641909.jpg" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>9<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>9<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2019/201909">Software Design 2019<wbr/>年<wbr/>9<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2019年8月17日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2019/201908"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2019/thumb/TH64_641908.jpg" data-srcset="/assets/images/cover/2019/thumb/TH64_641908.jpg 1x, /assets/images/cover/2019/thumb/TH128_641908.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>8<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>8<wbr/>月号" /><noscript><img src="/assets/images/cover/2019/thumb/TH64_641908.jpg" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>8<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>8<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2019/201908">Software Design 2019<wbr/>年<wbr/>8<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2019年7月18日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2019/201907"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2019/thumb/TH64_641907.jpg" data-srcset="/assets/images/cover/2019/thumb/TH64_641907.jpg 1x, /assets/images/cover/2019/thumb/TH128_641907.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>7<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>7<wbr/>月号" /><noscript><img src="/assets/images/cover/2019/thumb/TH64_641907.jpg" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>7<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>7<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2019/201907">Software Design 2019<wbr/>年<wbr/>7<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2019年6月18日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2019/201906"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2019/thumb/TH64_641906.jpg" data-srcset="/assets/images/cover/2019/thumb/TH64_641906.jpg 1x, /assets/images/cover/2019/thumb/TH128_641906.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>6<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>6<wbr/>月号" /><noscript><img src="/assets/images/cover/2019/thumb/TH64_641906.jpg" width="64" height="90" alt="［表紙］Software Design 2019<wbr/>年<wbr/>6<wbr/>月号" title="［表紙］Software Design 2019<wbr/>年<wbr/>6<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2019/201906">Software Design 2019<wbr/>年<wbr/>6<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2019年5月17日発売</p>
+<p class="price">定価（本体1,220円＋税）[品切]</p>
+</div>
+</li>
+
+
+</ul>
+
+<div  class="pageSwitch01 pageSwitch02">
+<p class="back"></p>
+<p class="next"><a href="magazine/SD/backnumber?start=20"><img src="/assets/templates/gihyojp2007/image/image_link/pageSwitch_next.gif" alt="次のページへ" width="81" height="13" class="buttons" /></a></p>
+</div>
+
+</div>
+
+
+
+</div>
+</article>
+<aside>
+<div id="secondary" class="robots-nocontent" itemscope itemtype="http://schema.org/WPSideBar">
+
+<div id="secondaryTopTextPr" class="textPR" style="height: 0">
+<div class="prList01">
+<div id="div-gpt-ad-1369887592403-2" style="width:300px; height:auto" class="is-banner">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1369887592403-2'); });
+</script>
+</div>
+
+<div id="div-gpt-ad-1369887592403-3" style="width:300px; height:auto" class="is-banner">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1369887592403-3'); });
+</script>
+</div>
+
+</div>
+</div>
+<div id="bannerRT1" class="banner">
+<div id="div-gpt-ad-1369887592403-4" style="width:300px; height:auto; margin:0 auto" class="is-banner">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1369887592403-4'); });
+</script>
+</div>
+
+</div>
+<div id="gdp" class="sectionBlock04 clearfix">
+<div id="div-gpt-ad-1369887592403-14" style="width:300px; height:auto; margin:0 auto" class="is-banner">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1369887592403-14'); });
+</script>
+</div>
+
+</div>
+
+<div id="backNumber" class="sectionBlock01">
+<h2>Software Designバックナンバー</h2>
+<ul class="thumbnailList01">
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2021/202101"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2021/thumb/TH64_642101.jpg" data-srcset="/assets/images/cover/2021/thumb/TH64_642101.jpg 1x, /assets/images/cover/2021/thumb/TH128_642101.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2021<wbr/>年<wbr/>1<wbr/>月号" title="［表紙］Software Design 2021<wbr/>年<wbr/>1<wbr/>月号" /><noscript><img src="/assets/images/cover/2021/thumb/TH64_642101.jpg" width="64" height="90" alt="［表紙］Software Design 2021<wbr/>年<wbr/>1<wbr/>月号" title="［表紙］Software Design 2021<wbr/>年<wbr/>1<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2021/202101">Software Design 2021<wbr/>年<wbr/>1<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年12月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202012"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642012.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642012.jpg 1x, /assets/images/cover/2020/thumb/TH128_642012.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>12<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>12<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642012.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>12<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>12<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202012">Software Design 2020<wbr/>年<wbr/>12<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年11月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202011"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642011.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642011.jpg 1x, /assets/images/cover/2020/thumb/TH128_642011.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>11<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>11<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642011.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>11<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>11<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202011">Software Design 2020<wbr/>年<wbr/>11<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年10月17日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202010"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642010.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642010.jpg 1x, /assets/images/cover/2020/thumb/TH128_642010.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>10<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>10<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642010.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>10<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>10<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202010">Software Design 2020<wbr/>年<wbr/>10<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年9月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="cover"><a href="/magazine/SD/archive/2020/202009"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2020/thumb/TH64_642009.jpg" data-srcset="/assets/images/cover/2020/thumb/TH64_642009.jpg 1x, /assets/images/cover/2020/thumb/TH128_642009.jpg 2x" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>9<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>9<wbr/>月号" /><noscript><img src="/assets/images/cover/2020/thumb/TH64_642009.jpg" width="64" height="90" alt="［表紙］Software Design 2020<wbr/>年<wbr/>9<wbr/>月号" title="［表紙］Software Design 2020<wbr/>年<wbr/>9<wbr/>月号" /></noscript></a></div>
+<div class="data">
+<h3><a href="/magazine/SD/archive/2020/202009">Software Design 2020<wbr/>年<wbr/>9<wbr/>月号</a></h3>
+<p class="author"></p>
+<p class="sellingdate">2020年8月18日発売</p>
+<p class="price">定価（本体1,220円＋税）</p>
+</div>
+</li>
+</ul>
+<p class="linkParagraph01"><a href="magazine/SD/backnumber">Software Designバックナンバー一覧</a></p></div>
+
+<div id="eventInfo" class="sectionBlock04 clearfix"></div>
+<div id="gihyojpSpecial"  class="sectionBlock04 clearfix">
+<h2>ピックアップ</h2>
+<dl class="definition01">
+
+<dt><a href="news/interview/2020/12/1501">プロダクト思考で開発が進む「みてね」の今とこれから～みてねの生みの親笠原健治氏，開発マネージャ酒井篤氏が考える，プロダクトとエンジニアリングの素敵な関係</a></dt>
+<dd class="clearfix">
+<div class="logo"><a href="/news/interview/2020/12/1501"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/ICON/2020/thumb/TH64_1832_mitene1215interview2.png" data-srcset="/assets/images/ICON/2020/thumb/TH64_1832_mitene1215interview2.png 1x, /assets/images/ICON/2020/thumb/TH128_1832_mitene1215interview2.png 2x" alt="プロダクト思考で開発が進む「みてね」の今とこれから～みてねの生みの親笠原健治氏，開発マネージャ酒井篤氏が考える，プロダクトとエンジニアリングの素敵な関係" title="プロダクト思考で開発が進む「みてね」の今とこれから～みてねの生みの親笠原健治氏，開発マネージャ酒井篤氏が考える，プロダクトとエンジニアリングの素敵な関係" width="64" height="64" /><noscript><img src="/assets/images/ICON/2020/thumb/TH64_1832_mitene1215interview2.png" alt="プロダクト思考で開発が進む「みてね」の今とこれから～みてねの生みの親笠原健治氏，開発マネージャ酒井篤氏が考える，プロダクトとエンジニアリングの素敵な関係" title="プロダクト思考で開発が進む「みてね」の今とこれから～みてねの生みの親笠原健治氏，開発マネージャ酒井篤氏が考える，プロダクトとエンジニアリングの素敵な関係" width="64" height="64" /></noscript></a></div>
+<p>「家族アルバム みてね」を支えるエンジニアリングについて，開発体制やプロダクトの開発・運用，これからのビジョンについて伺いました。</p>
+</dd>
+<dt><a href="news/interview/2020/12/0101">自分の証明と持続的な学びがこれからのDX人材の鍵を握る ～A-BANKが考えるDX人材バンクの在り方とは？</a></dt>
+<dd class="clearfix">
+<div class="logo"><a href="/news/interview/2020/12/0101"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/ICON/2020/thumb/TH64_1830_interview_dx_A-bank.png" data-srcset="/assets/images/ICON/2020/thumb/TH64_1830_interview_dx_A-bank.png 1x, /assets/images/ICON/2020/thumb/TH128_1830_interview_dx_A-bank.png 2x" alt="自分の証明と持続的な学びがこれからのDX人材の鍵を握る ～A-BANKが考えるDX人材バンクの在り方とは？" title="自分の証明と持続的な学びがこれからのDX人材の鍵を握る ～A-BANKが考えるDX人材バンクの在り方とは？" width="64" height="64" /><noscript><img src="/assets/images/ICON/2020/thumb/TH64_1830_interview_dx_A-bank.png" alt="自分の証明と持続的な学びがこれからのDX人材の鍵を握る ～A-BANKが考えるDX人材バンクの在り方とは？" title="自分の証明と持続的な学びがこれからのDX人材の鍵を握る ～A-BANKが考えるDX人材バンクの在り方とは？" width="64" height="64" /></noscript></a></div>
+<p>2020年11月にスタートしたA-BANKの人材バンク。評価・育成・紹介の一体型人材紹介から見える，これからの人材エコシステムに迫ります。</p>
+</dd>
+<dt><a href="dev/column/01/prog/2020/04/api_servicemesh">APIゲートウェイとサービスメッシュの違い</a></dt>
+<dd class="clearfix">
+<div class="logo"><a href="/dev/column/01/prog/2020/04/api_servicemesh"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/ICON/2020/thumb/TH64_1812_api_servicemesh.png" data-srcset="/assets/images/ICON/2020/thumb/TH64_1812_api_servicemesh.png 1x, /assets/images/ICON/2020/thumb/TH128_1812_api_servicemesh.png 2x" alt="APIゲートウェイとサービスメッシュの違い" title="APIゲートウェイとサービスメッシュの違い" width="64" height="64" /><noscript><img src="/assets/images/ICON/2020/thumb/TH64_1812_api_servicemesh.png" alt="APIゲートウェイとサービスメッシュの違い" title="APIゲートウェイとサービスメッシュの違い" width="64" height="64" /></noscript></a></div>
+<p>APIゲートウェイとサービスメッシュの，それぞれの概要とユースケースを紹介し，いずれを使用するかの判断の指針となるチートシートを提供しています。</p>
+</dd>
+<dt><a href="dev/column/01/prog/2020/03/lightningchart-trader">LightningChart® Traderによるテクニカル分析と証券取引アプリケーションの開発</a></dt>
+<dd class="clearfix">
+<div class="logo"><a href="/dev/column/01/prog/2020/03/lightningchart-trader"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/ICON/2020/thumb/TH64_1811_lightningchart-trader2.png" data-srcset="/assets/images/ICON/2020/thumb/TH64_1811_lightningchart-trader2.png 1x, /assets/images/ICON/2020/thumb/TH128_1811_lightningchart-trader2.png 2x" alt="LightningChart® Trader によるテクニカル分析と証券取引アプリケーションの開発" title="LightningChart® Trader によるテクニカル分析と証券取引アプリケーションの開発" width="64" height="64" /><noscript><img src="/assets/images/ICON/2020/thumb/TH64_1811_lightningchart-trader2.png" alt="LightningChart® Trader によるテクニカル分析と証券取引アプリケーションの開発" title="LightningChart® Trader によるテクニカル分析と証券取引アプリケーションの開発" width="64" height="64" /></noscript></a></div>
+<p>証券取引アプリケーションの開発プロセスを大幅に簡素化するLightningChart® Traderのビルドイン機能について紹介します。</p>
+</dd>
+<!--<dt><a href="news/interview/2019/11/0801">技術的好奇心を満たせる2日間 ―「LINE DEVELOPER DAY 2019」へ行こう</a></dt>
+<dd class="clearfix">
+<div class="logo"><a href="/news/interview/2019/11/0801"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/ICON/2019/thumb/TH64_1786_LDD2019.png" data-srcset="/assets/images/ICON/2019/thumb/TH64_1786_LDD2019.png 1x, /assets/images/ICON/2019/thumb/TH128_1786_LDD2019.png 2x" alt="技術的好奇心を満たせる2日間 ―「LINE DEVELOPER DAY 2019」へ行こう" title="技術的好奇心を満たせる2日間 ―「LINE DEVELOPER DAY 2019」へ行こう" width="64" height="64" /><noscript><img src="/assets/images/ICON/2019/thumb/TH64_1786_LDD2019.png" alt="技術的好奇心を満たせる2日間 ―「LINE DEVELOPER DAY 2019」へ行こう" title="技術的好奇心を満たせる2日間 ―「LINE DEVELOPER DAY 2019」へ行こう" width="64" height="64" /></noscript></a></div>
+<p>今年で5回目を迎える技術カンファレンス「LINE DEVELOPER DAY 2019」。LINEのエンジニア3名がイベントに先駆けて見どころを紹介します。</p>
+</dd>-->
+<dt><a href="dev/serial/01/code_dev_cycle">コードの安全性・安定性を高める開発サイクル～テスト管理の効率を上げ，脆弱性診断を自動で行う～</a></dt>
+<dd class="clearfix">
+<div class="logo"><a href="/dev/serial/01/code_dev_cycle"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/ICON/2019/thumb/TH64_1751_code_dev_cycle.png" data-srcset="/assets/images/ICON/2019/thumb/TH64_1751_code_dev_cycle.png 1x, /assets/images/ICON/2019/thumb/TH128_1751_code_dev_cycle.png 2x" alt="コードの安全性・安定性を高める開発サイクル ～テスト管理の効率を上げ，脆弱性診断を自動で行う～" title="コードの安全性・安定性を高める開発サイクル ～テスト管理の効率を上げ，脆弱性診断を自動で行う～" width="64" height="64" /><noscript><img src="/assets/images/ICON/2019/thumb/TH64_1751_code_dev_cycle.png" alt="コードの安全性・安定性を高める開発サイクル ～テスト管理の効率を上げ，脆弱性診断を自動で行う～" title="コードの安全性・安定性を高める開発サイクル ～テスト管理の効率を上げ，脆弱性診断を自動で行う～" width="64" height="64" /></noscript></a></div>
+<p>本連載では，連載「業務を改善する情報共有の仕掛け」を受けつつ，安全性・安定性を加えた開発サイクルについて考えていきます。</p>
+</dd>
+
+</dl>
+
+</div>
+
+<div id="adPanel" class="sectionBlock01">
+<h2>おすすめムック</h2>
+<ul class="thumbnailList01">
+<li class="clearfix">
+<div class="thumbnail"><a href="/book/2015/978-4-7741-7538-6"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2015/thumb/TH64_9784774175386.jpg" data-srcset="/assets/images/cover/2015/thumb/TH64_9784774175386.jpg 1x, /assets/images/cover/2015/thumb/TH128_9784774175386.jpg 2x" alt="WEB+DB PRESS総集編［Vol.1～84］" title="WEB+DB PRESS総集編［Vol.1～84］" width="64" height="90" /><noscript><img src="/assets/images/cover/2015/thumb/TH64_9784774175386.jpg" alt="WEB+DB PRESS総集編［Vol.1～84］" title="WEB+DB PRESS総集編［Vol.1～84］" width="64" height="90" /></noscript></a></div>
+<div class="data">
+<h3><a href="/book/2015/978-4-7741-7538-6">WEB+DB PRESS総集編［Vol.1～84］</a></h3>
+<p>WEB+DB PRESS総集編第5弾です。Vol.1～84まで14年分のバックナンバーと，過去4回の総集編の書き下ろし記事をDVDに一挙収録します。特別書き下ろしとして豪華執筆陣によ...</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="thumbnail"><a href="/book/2013/978-4-7741-5714-6"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2013/thumb/TH64_9784774157146.jpg" data-srcset="/assets/images/cover/2013/thumb/TH64_9784774157146.jpg 1x, /assets/images/cover/2013/thumb/TH128_9784774157146.jpg 2x" alt="Software Design総集編 【1990〜2000】" title="Software Design総集編 【1990〜2000】" width="64" height="90" /><noscript><img src="/assets/images/cover/2013/thumb/TH64_9784774157146.jpg" alt="Software Design総集編 【1990〜2000】" title="Software Design総集編 【1990〜2000】" width="64" height="90" /></noscript></a></div>
+<div class="data">
+<h3><a href="/book/2013/978-4-7741-5714-6">Software Design総集編 【1990〜2000】</a></h3>
+<p>『Software Design』のバックナンバーを収録したDVDと書き下ろし記事が一緒になった総集編です。インターネット黎明期の技術は，現代のITのベースにもなっています。そ...</p>
+</div>
+</li>
+<li class="clearfix">
+<div class="thumbnail"><a href="/book/2013/978-4-7741-5593-7"><img class="lazyload" src="/assets/images/reading.gif" data-src="/assets/images/cover/2013/thumb/TH64_9784774155937.jpg" data-srcset="/assets/images/cover/2013/thumb/TH64_9784774155937.jpg 1x, /assets/images/cover/2013/thumb/TH128_9784774155937.jpg 2x" alt="Software Design総集編 【2001～2012】" title="Software Design総集編 【2001～2012】" width="64" height="90" /><noscript><img src="/assets/images/cover/2013/thumb/TH64_9784774155937.jpg" alt="Software Design総集編 【2001～2012】" title="Software Design総集編 【2001～2012】" width="64" height="90" /></noscript></a></div>
+<div class="data">
+<h3><a href="/book/2013/978-4-7741-5593-7">Software Design総集編 【2001～2012】</a></h3>
+<p>『Software Design』のバックナンバーを収録したDVD-ROMと書き下ろし記事が一緒になった総集編です。12年分のIT技術／ノウハウが詰まった本誌はITエンジニアの強い味方...</p>
+</div>
+</li>
+</ul>
+<p class="linkParagraph01"><a href="/mook">おすすめムック一覧</a></p>
+</div>
+
+
+</div>
+</aside>
+</div>
+<aside>
+<div id="sub" class="robots-nocontent" itemscope itemtype="http://schema.org/WPSideBar">
+
+<div id="contentList" class="sectionBlock02">
+<div class="section">
+<h2><a href="/" class="gihyojp"><img src="/assets/templates/gihyojp2007/image/gihyojp_logo.png" alt="gihyo.jp" width="84" height="16" /></a></h2>
+<ul class="level01">
+<li><a href="/dev" title="DEVELOPER STAGE">デベロッパ</a></li><li><a href="/admin" title="ADMINISTRATOR STAGE">アドミニストレータ</a></li><li><a href="/design" title="WEB+DESIGN STAGE">WEB+デザイン</a></li><li><a href="/lifestyle" title="LIFESTYLE STAGE">ライフスタイル</a></li><li><a href="/science" title="SCIENCE STAGE">サイエンス</a></li><li><a href="/news" title="NEWS &amp; REPORT">ニュース&amp;レポート</a></li></ul>
+</div>
+<div class="section">
+<h2><a href="/book">書籍案内</a></h2>
+<ul class="level01"><li><a href="/book/list" title="新刊書籍">新刊書籍</a></li><li><a href="/book/genre" title="書籍ジャンル一覧">書籍ジャンル一覧</a></li><li><a href="/book/series" title="書籍シリーズ一覧">書籍シリーズ一覧</a></li><li><a href="/book/pickup" title="新刊ピックアップ">新刊ピックアップ</a></li><li><a href="/book/longseller" title="ロングセラー">ロングセラー</a></li><li><a href="/book/dennou" title="電脳会議">電脳会議</a></li></ul>
+</div>
+<div class="section">
+<h2><a href="/magazine">定期刊行物一覧</a></h2>
+<ul class="level01">
+<li><a href="/magazine/SD" title="Software Design" class="sd">Software Design</a>	<ul class="level02">
+	<li><a href="/magazine/SD/archive/2021/202101">最新号紹介</a></li>
+	<li><a href="/magazine/SD/serial">Web連載</a></li>
+	<li><a href="/magazine/SD/newshotline">News Hot Line</a></li>
+	</ul>
+</li><li><a href="/magazine/wdpress" title="WEB+DB PRESS" class="wdpress">WEB+DB PRESS</a></li></ul>
+</div>
+<div class="section">
+<h2><a href="https://gihyo.jp/dp" title="Gihyo Digital Publishing" style="background-image: none;padding-left: 7px;"><img src="/dp/assets/gdp-icon.png" width="24" height="24" style="position:relative;top:7px;margin-right:2px;">電子書籍ストア</a></h2>
+<ul class="level01">
+<li><a href="https://gihyo.jp/dp/information" title="ストアからのお知らせ">お知らせ</a></li>
+<li><a href="https://gihyo.jp/dp/help" title="ストアについてのヘルプ">ご購入方法・読み方</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="contentsRank" class="sectionBlock01">
+<h2 class="bigBullet">昨日よく読まれた記事</h2>
+<ul class="linkList01">
+<li><a href="/book/nenga/2010/serial/0008">第8回　困ったときの年賀状文案集</a></li>
+<li><a href="/admin/clip/01/linux_dt/202012/24">2020年12月24日　オープンソースとビジネスのはざまで ―CentOS開発リーダー，ユーザに理解を求める</a></li>
+<li><a href="/admin/serial/01/ubuntu-recipe/0647">第647回　Ubuntu CoreなRaspberry PiをUbuntuサーバーとして使う</a></li>
+<li><a href="/design/serial/01/website-pickup/0165">第165回　Apple Fitness+，Playco，Ruffle</a></li>
+<li><a href="/lifestyle/clip/01/awt/202012/24">2020年12月第4週　2020年のAndroidを振り返る</a></li>
+<li><a href="/dev/serial/01/mysql-road-construction-news/0137">第137回　MySQLTunerを使ってチューニングの足がかりを見つけてみる</a></li>
+<li><a href="/design/clip/01/weekly-web-tech/202012/24">2020年12月第4週号 1位は，2020年版のデザインツール投票の結果発表，気になるネタは，TwitterのRT仕様，元に戻した理由は「“思慮深い拡散”につながらなかった」から</a></li>
+<li><a href="/admin/clip/01/ubuntu-topics/202012/18">2020年12月18日号　『Ubuntu on Windows』のプロトタイプ・DirectX12のためのmesaの調整</a></li>
+<li><a href="/lifestyle/serial/01/management_site/0004">第4回　エンジニアを採用し，活躍してもらうには？</a></li>
+<li><a href="/design/serial/01/ui-design-unsung/0021">第21回　初期リリースにおける理想像とのずれをどうするか</a></li>
+
+</ul>
+</div>
+
+
+</div>
+</aside>
+
+</div>
+<footer role="contentinfo">
+<div id="footer" itemscope itemtype="http://schema.org/WPFooter">
+
+<div id="footerContent" class="clearfix">
+
+<div id="information">
+<h2><a href="/mail">メールでのお知らせ</a></h2>
+<p>メールで次の案内をお送りしております。メールの配信を希望する方は，利用したい項目をチェックしてメールアドレスを入力し，［登録］ボタンをクリックしてください。</p>
+<form id="informationForm" name="informationForm" method="post" action="/mail?mailregist#mailinfo">
+<ul>
+<li><input type="checkbox" id="informationFormCheck00" name="gihyojp" value="checked" checked="checked" />
+<label for="informationFormCheck00">gihyo.jp UPDATES［ほぼ週間に1回］</label>
+</li>
+<li><input type="checkbox" id="informationFormCheck01" name="newPublished" value="checked" checked="checked" />
+<label for="informationFormCheck01">新刊メールマガジン［ほぼ週間に1回］</label>
+</li>
+<li><input type="checkbox" id="informationFormCheck02" name="dennou" value="checked" checked="checked" />
+<label for="informationFormCheck02">電脳会議の各号案内［ほぼ1ヵ月半に1回］</label></li>
+</ul>
+<p class="submit"><input name="mailaddress" id="informationFormEmail" type="email" value="e-mailアドレスを入力" autocapitalize="off" autocorrect="off" autocomplete="email" onfocus="this.value=(this.value=='e-mailアドレスを入力')? '' : this.value ;" onblur="this.value=(this.value=='')? 'e-mailアドレスを入力' : this.value ;" />
+<input class="submitButton" id="informationFormSubmit" type="submit" value="登録" /></p>
+</form>
+<p class="note">※変更する場合や停止する場合は，<a href="/mail">登録情報変更ページ</a>をご覧ください。</p>
+<p class="note">※登録いただいたメールアドレスには，そのお知らせ以外，配信いたしません。</p>
+</div>
+
+<div id="siteSummary">
+<h2><a href="/site">このサイトについて</a></h2>
+<ul>
+<li><a href="/site/profile">会社案内</a></li>
+<li><a href="/site/policy">プライバシーポリシー</a></li>
+<li><a href="/site/social">ソーシャルメディアの運用について</a></li>
+<li><a href="/site/purchase">刊行物の購入について</a></li>
+
+<li><a href="/cmd">カスタム出版・マーケティングのご案内</a></li>
+<li><a href="/site/inquiry">お問い合わせ</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="utility">
+<ul class="logoIcon">
+<li class="num01"><a href="/magazine/SD" title="「Software Design」のトップページに移動"><img src="/assets/templates/gihyojp2007/image/btn_icon_sd.gif" alt="Software Design" width="23" height="21" class="buttons" /></a></li>
+<li class="num02"><a href="/magazine/wdpress" title="「WEB+DB PRESS」のトップページに移動"><img src="/assets/templates/gihyojp2007/image/btn_icon_wd.gif" alt="WEB+DB PRESS" width="23" height="21" class="buttons" /></a></li>
+</ul>
+
+<p class="feed"><a href="/feed" title="gihyo.jpのフィードを確認">RSS/ATOM</a></p>
+<p id="gotoHeader"><a href="/magazine/SD/backnumber#header">このページの先頭へ</a></p>
+</div>
+
+<div id="copyright">
+<div class="logo"><a href="http://www.gihyo.co.jp/"><img src="/assets/templates/gihyojp2007/image/gihyo_logo.png" alt="技術評論社" width="97" height="18" /></a></div>
+<p>Copyright &copy; 2007-2021 All Rights Reserved by Gijutsu-Hyohron Co., Ltd.<br />ページ内容の全部あるいは一部を無断で利用することを禁止します。個別にライセンスが設定されている記事等はそのライセンスに従います。</p>
+</div>
+
+</div>
+</footer>
+
+</div>
+<script>var o = document.querySelector('#primary .readingContent01');if(window.navigator.userAgent.toLowerCase().indexOf('android') > -1 && o){o.style.textAlign = 'left'}</script>
+<noscript><link rel="stylesheet" href="/assets/templates/gihyojp2007/css/setAll0514.css" /></noscript>
+<script type="text/javascript">var l=document.createElement('link');l.setAttribute('rel','stylesheet');l.setAttribute('type','text/css');l.setAttribute('media','all');l.setAttribute('href','/assets/templates/gihyojp2007/css/setAll0514.css');document.head.appendChild(l);l=null;</script><script src="/assets/js/lazysizes.min.js" async=""></script><script type="text/javascript">
+$('#searchFormKeyword, #searchForm form').focus(function(e){this.value=(this.value=='検索したい用語を入力')?'':this.value;}).blur(function(e){this.value=(this.value=='')?'検索したい用語を入力':this.value;}).submit(function(e){this.value=(this.value=='検索したい用語を入力')?'':this.value;});
+function loadScript(src,callback){var e=document.createElement('script');if(e.readyState){e.onreadystatechange=function(){if(e.readyState=='loaded'||e.readyState=='complete'){e.onreadystatechange=null;callback();}};}else{e.onload=function(){callback();}};e.type='text/javascript';e.async=true;e.src=src;var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(e,s);}
+loadScript('/assets/js/smoothscroll-min.js',function(){});
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4149703-1', 'auto');
+ga('require', 'displayfeatures');
+
+ga('send', 'pageview');
+</script>
+<script type="text/javascript">
+(function(a){a("a img.buttons").hover(function(){this.originalSrc=a(this).attr("src");this.rolloverSrc=this.originalSrc.replace(/(_on)?(.gif|.jpg|.png)$/,"_on$2");this.rolloverImg=new Image;this.rolloverImg.src=this.rolloverSrc;a(this).attr("src",this.rolloverSrc)},function(){a(this).attr("src",this.originalSrc)})})(jQuery);
+(function(n){var m=new function(){for(var a="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(""),b=[],c=0;64>c;c++)b["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".charAt(c)]=c;this.encode=function(b,c){var d=c?l.unpackUTF8(b):l.unpackChar(b),i=d.length%3,h="",f,j=0;if(i)for(f=3-i;0<f;f--)d[d.length]=0;for(f=0;f<d.length;f+=3)j=d[f]<<16|d[f+1]<<8|d[f+2],h+=a[j>>>18&63]+a[j>>>12&63]+a[j>>>6&63]+a[j&63];if(i){i=3-i;for(h=h.substr(0,h.length-i);i--;)h+="="}return h};
+this.decode=function(a,c){var d;d=a.replace(/[^A-Za-z0-9\+\/]/g,"");var i=d.length%4,h,f,j,k=[];if(i)for(f=0;f<4-i;f++)d+="A";for(h=f=0;f<d.length;f+=4,h+=3)j=b[d.charAt(f)]<<18|b[d.charAt(f+1)]<<12|b[d.charAt(f+2)]<<6|b[d.charAt(f+3)],k[h]=j>>>16,k[h+1]=j>>>8&255,k[h+2]=j&255;i&&(k.length-=[0,0,2,1][i]);return c?l.packUTF8(k):l.packChar(k)}},l=new function(){this.unpackUTF16=function(a){var b,c=[];for(b=0;b<a.length;b++)c[b]=a.charCodeAt(b);return c};this.unpackChar=function(a){var a=this.unpackUTF16(a),
+b,c,e=[];for(c=b=0;b<a.length;b++)255>=a[b]?e[c++]=a[b]:(e[c++]=a[b]>>8,e[c++]=a[b]&255);return e};this.packChar=this.packUTF16=function(a){var b,c="";for(b in a)c+=String.fromCharCode(a[b]);return c};this.unpackUTF8=function(a){return this.toUTF8(this.unpackUTF16(a))};this.packUTF8=function(a){return this.packUTF16(this.toUTF16(a))};this.toUTF8=function(a){var b=[],c=0,e,g,d;for(e=0;e<a.length;e++)if(d=a[e],127>=d)b[c++]=d;else if(2047>=d)b[c++]=192|d>>>6,b[c++]=128|d&63;else if(65535>=d)b[c++]=
+224|d>>>12,b[c++]=128|d>>>6&63,b[c++]=128|d&63;else{for(g=4;d>>6*g;)g++;for(b[c++]=65280>>>g&255|d>>>6*--g;g--;)b[c++]=128|d>>>6*g&63}return b};this.toUTF16=function(a){var b=[],c=0,e,g;for(e=0;e<a.length;e++,c++)if(127>=a[e])b[c]=a[e];else if(6==a[e]>>5)b[c]=(a[e]&31)<<6|a[++e]&63;else if(14==a[e]>>4)b[c]=(a[e]&15)<<12|(a[++e]&63)<<6|a[++e]&63;else{for(g=1;a[e]&32>>>g;)g++;for(b[c]=a[e]&31>>>g;0<=g--;)b[c]=b[c]<<6^a[++e]&63}return b};this.URLencode=function(a){return a.replace(/([^a-zA-Z0-9_\-\.])/g,
+function(a,c){if(" "==c)return"+";var e=l.toUTF8([c.charCodeAt(0)]),g="",d;for(d in e)d=e[d].toString(16),1==d.length&&(d="0"+d),g+="%"+d;return g})};this.URLdecode=function(a){a=a.replace(/\+/g," ");a=a.replace(/%([a-fA-F0-9][a-fA-F0-9])/g,function(a,c){return String.fromCharCode(parseInt(c,16))});return this.packChar(this.toUTF16(this.unpackUTF16(a)))}};n.extend({base64:{encode:m.encode,decode:m.decode,codec:"function"==typeof atob?"builtin":"alternate"}})})(jQuery);
+window.onerror=function(mes,fname,lnum){var erIgnore=['top.GLOBALS','originalCreateNotification','canvas.contentDocument','fb_xd_fragment','Script error.'];for(i=0;i<erIgnore.length;i++){if(mes.indexOf(erIgnore[i])>-1){return false;}};var mes='message:'+mes+', file:'+fname+', line:'+lnum+', href:'+location.href+', UA:'+window.navigator.userAgent;ga('send','event','Error','JSError',mes);};
+if (typeof(ga) !== 'undifined') {
+  obj = document.querySelectorAll('.storeLink01 a');
+  for (k in obj) {
+    if (isNaN(k)) continue;
+    a = obj[k];
+    a.addEventListener('click', function(e){
+      label = e.target.textContent;
+      ga('send', 'pageview', '/go-' + encodeURIComponent(label));
+    });
+  }
+}</script>
+
+
+
+<script type="text/javascript">
+var html = "<h2>イベント</h2>\n<ul class=\"linkList02\">\n";
+var array = {
+'https://rhc.connpass.com/event/195483/': 'UnVieSAzLjAgcmVsZWFzZSBldmVudO+8iDEyLzI277yJ',
+'https://ubuntujp.connpass.com/event/199568/': 'VWJ1bnR1IFN0cmVhbWluZyBNZWV0aW5nIDIxLjAx77yIMS8xN++8iQ==',
+'https://forkwell.connpass.com/event/197119/': 'SW5mcmEgU3R1ZHkgTWVldHVwICMxMOOAjDIwMljlubTjga7jgqTjg7Pjg5Xjg6nmioDooZPjgI3vvIgxLzI277yJ',
+'https://globalgamejam.org/2021/jam-sites?title=&amp;country=JP': 'R2xvYmFsIEdhbWUgSmFtIE9ubGluZe+8iDEvMjfjgJwzMe+8iQ==',
+'https://jawsdays2021.jaws-ug.jp/': 'SkFXUyBEQVlTIDIwMjEgLXJlOkNvbm5lY3Qt77yIMy8yMO+8iQ==',
+'https://phperkaigi.jp/2021/': 'UEhQZXJLYWlnaSAyMDIx77yIMy8yNeOAnDI377yJ',
+
+};
+for(key in array){
+  var str = $.base64.decode(array[key], 1);
+  var tmp = str.match(/^(.+?)(（.+?）)$/);
+  if(tmp){
+    html = html + '<li><a href="' + key + '" rel="external">' + tmp[1] + '</a>' + tmp[2] + "</li>\n";
+  }
+}
+html = html + "</ul>";
+document.getElementById("eventInfo").innerHTML = html;
+</script>
+
+
+</body>
+</html>

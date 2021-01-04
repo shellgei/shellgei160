@@ -1,0 +1,444 @@
+<table class="forecast" id="forecasttablefont">
+<caption style="text-align:left;">2日17時静岡地方気象台発表の天気予報(今日2日から明後日4日まで)
+</caption>
+<tr>
+<th colspan="2" class="th-area"><div style="float: left">中部</div></th>
+<th class="th-rain">降水確率</th>
+<th class="th-temp">気温予報</th>
+</tr>
+<tr>
+<th class="weather">
+今夜2日<br><img src="img/701.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　やや強く　海上　では　北西の風　強く　晴れ　夜のはじめ頃　くもり<br>波　３メートル　後　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left">00-06</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">06-12</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">12-18</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp"><tr>
+<th></th>
+<th></th>
+<th nowrap></th>
+</tr></table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明日3日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　後　やや強く　海上　では　西の風　強く　晴れ　時々　くもり<br>波　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left" nowrap>00-06</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>06-12</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>12-18</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp">
+<tr>
+<th></th>
+<th nowrap>朝の最低</th>
+<th nowrap>日中の最高</th>
+</tr>
+<tr>
+<td class="city">静岡</td>
+<td class="min">1度</td>
+<td class="max">12度</td>
+</tr>
+</table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明後日4日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　後　やや強く　晴れ　時々　くもり<br>波　２メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td><br></td>
+<td rowspan="4"><div><input class="linkbtn" type="button" title="週間天気予報へ" value="週間天気予報へ" onclick="javascript:goNext()"></div></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+</table></div></td>
+<td class="temp">&nbsp;
+</td>
+</tr>
+<tr>
+<th colspan="2" class="th-area"><div style="float: left">伊豆</div></th>
+<th class="th-rain">降水確率</th>
+<th class="th-temp">気温予報</th>
+</tr>
+<tr>
+<th class="weather">
+今夜2日<br><img src="img/700.png" align="middle" title="晴れ" alt="晴れ"><br>
+</th>
+<td class="info">西の風　やや強く　伊豆南　では　西の風　強く　晴れ<br>波　３メートル　後　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left">00-06</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">06-12</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">12-18</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp"><tr>
+<th></th>
+<th></th>
+<th nowrap></th>
+</tr></table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明日3日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　やや強く　伊豆南　では　西の風　強く　晴れ　時々　くもり<br>波　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left" nowrap>00-06</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>06-12</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>12-18</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp">
+<tr>
+<th></th>
+<th nowrap>朝の最低</th>
+<th nowrap>日中の最高</th>
+</tr>
+<tr>
+<td class="city">網代</td>
+<td class="min">3度</td>
+<td class="max">9度</td>
+</tr>
+<tr>
+<td class="city">石廊崎</td>
+<td class="min">6度</td>
+<td class="max">10度</td>
+</tr>
+</table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明後日4日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　後　やや強く　晴れ　時々　くもり<br>波　２．５メートル　後　２メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td><br></td>
+<td rowspan="4"><div><input class="linkbtn" type="button" title="週間天気予報へ" value="週間天気予報へ" onclick="javascript:goNext()"></div></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+</table></div></td>
+<td class="temp">&nbsp;
+</td>
+</tr>
+<tr>
+<th colspan="2" class="th-area"><div style="float: left">東部</div></th>
+<th class="th-rain">降水確率</th>
+<th class="th-temp">気温予報</th>
+</tr>
+<tr>
+<th class="weather">
+今夜2日<br><img src="img/700.png" align="middle" title="晴れ" alt="晴れ"><br>
+</th>
+<td class="info">西の風　後　北東の風　海上　では　西の風　やや強く　晴れ<br>波　１メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left">00-06</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">06-12</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">12-18</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp"><tr>
+<th></th>
+<th></th>
+<th nowrap></th>
+</tr></table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明日3日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">東の風　日中　南西の風　海上　では　西の風　やや強く　晴れ　時々　くもり<br>波　１メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left" nowrap>00-06</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>06-12</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>12-18</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp">
+<tr>
+<th></th>
+<th nowrap>朝の最低</th>
+<th nowrap>日中の最高</th>
+</tr>
+<tr>
+<td class="city">三島</td>
+<td class="min">-1度</td>
+<td class="max">11度</td>
+</tr>
+</table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明後日4日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">南西の風　晴れ　時々　くもり<br>波　１メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td><br></td>
+<td rowspan="4"><div><input class="linkbtn" type="button" title="週間天気予報へ" value="週間天気予報へ" onclick="javascript:goNext()"></div></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+</table></div></td>
+<td class="temp">&nbsp;
+</td>
+</tr>
+<tr>
+<th colspan="2" class="th-area"><div style="float: left">西部</div></th>
+<th class="th-rain">降水確率</th>
+<th class="th-temp">気温予報</th>
+</tr>
+<tr>
+<th class="weather">
+今夜2日<br><img src="img/701.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　やや強く　海上　では　北西の風　強く　晴れ　夜のはじめ頃　くもり<br>波　３メートル　後　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left">00-06</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">06-12</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">12-18</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp"><tr>
+<th></th>
+<th></th>
+<th nowrap></th>
+</tr></table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明日3日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　後　やや強く　海上　では　西の風　強く　晴れ　時々　くもり<br>波　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left" nowrap>00-06</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>06-12</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>12-18</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp">
+<tr>
+<th></th>
+<th nowrap>朝の最低</th>
+<th nowrap>日中の最高</th>
+</tr>
+<tr>
+<td class="city">浜松</td>
+<td class="min">2度</td>
+<td class="max">9度</td>
+</tr>
+<tr>
+<td class="city">御前崎</td>
+<td class="min">3度</td>
+<td class="max">9度</td>
+</tr>
+</table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明後日4日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　後　やや強く　晴れ　時々　くもり<br>波　２メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td><br></td>
+<td rowspan="4"><div><input class="linkbtn" type="button" title="週間天気予報へ" value="週間天気予報へ" onclick="javascript:goNext()"></div></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+</table></div></td>
+<td class="temp">&nbsp;
+</td>
+</tr>
+</table>
+<div class="fortemplete">(/:のち, |:時々または一時)</div>
+<br>
+</div>
+<pre class="textframe">天気概況
+令和０３年１月２日１６時３８分　静岡地方気象台発表
+
+<b>　中部、伊豆、西部では、強風や高波に注意してください。中部では、空気
+の乾燥した状態が続くため、火の取り扱いに注意してください。</b>
+
+　日本付近は、冬型の気圧配置となっています。
+
+　静岡県は、晴れまたは曇りとなっています。
+
+　２日は、冬型の気圧配置が続くためおおむね晴れますが、寒気の影響で雲が広がりやすいでしょう。
+
+　３日は、冬型の気圧配置が続くためおおむね晴れますが、寒気の影響で雲が広がりやすい見込みです。</pre>
+<div id="explain">
+<a name="explain"></a>
+毎日5時・11時・17時に発表します。<br>
+また、この時間以外にも状況により随時発表します。<br>
+最新の天気予報をご利用ください。
+<br><br><ul class="pagelink">
+<li><a href="/jma/kishou/know/kurashi/yoho.html">天気予報について</a></li>
+<li><a href="/jma/kishou/know/saibun/index.html">天気予報の発表区域について</a></li>
+</ul>
+</div>
+<div id="gotop"><a href="#top">このページのトップへ</a></div>
+</div>
+</div>
+<div id="foot">
+<div id="disclosure_wrap" style="width: 960px; clear: both;text-align:left;" class="jma_ad_space">
+<div style="width:300px; text-align:right; margin-right: 20px; float: left;font-size:14px">[広告]</div>
+<div style="width:300px; text-align:right;float: left;font-size:14px">[広告]</div>
+</div>
+<div id="footer_ad_wrap" style="width: 960px; height: 250px; clear: both;text-align:left; margin-bottom:20px;" class="jma_ad_space">
+<div id="jma_ad_3_300x250_2" style="width: 300px; height: 250px; margin-right: 20px; float: left;"></div>
+<div id="jma_ad_3_300x250_3" style="width: 300px; height: 250px; float: left;"></div>
+</div>
+<a href="/jma/kishou/info/coment.html">気象庁ホームページについて</a><input type="button" id="jma_ad_config_button" name="jma_ad_config_button" value="広告非表示" style="cursor:pointer"><script async="true" src="//www.jma.go.jp/jma/com/ad_js/production/jma-ad-common.js"></script><script async="true" src="//www.jma.go.jp/jma/com/ad_js/production/jma-ad-hb-config.js"></script><script async="true" src="//www.jma.go.jp/jma/com/ad_js/production/jma-prebid.js"></script><script async="true" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><script async="true" src="//www.jma.go.jp/jma/com/ad_js/production/gptslots3.js"></script>
+</div>
+</body>
+</html>

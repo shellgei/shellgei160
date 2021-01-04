@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:EXT_FNC="FORECAST" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="気象庁 Japan Meteorological Agency">
+<meta name="keywords" content="気象庁 Japan Meteorological Agency">
+<title>気象庁 | 天気予報
+： 静岡県</title>
+<link href="../common/default.css" rel="stylesheet" type="text/css" media="all">
+<link href="../common/weather_info_v2.css" rel="stylesheet" type="text/css" media="all">
+<link media="print" rel="stylesheet" type="text/css" href="../common/print.css">
+<style type="text/css" media="all">
+
+@import url(../common/weather_info_v2.css);
+#guide {
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+border: 0px;
+}
+#explain { border: 0px; }
+#info { border: 0px; lheight: 16em; }
+.linkbtn { width: 95px; font-size:8pt; }
+.jikeibtn { width: 105px; font-size:8pt; }
+#info table {
+font-size: 100%;
+}
+#forecasttablefont{
+font-size:100%;
+}
+
+</style>
+<link href="yoho.css" rel="stylesheet" type="text/css" media="all">
+<script src="../common/weather_info.js" type="text/javascript"></script><script src="../common/contents_walker.js" type="text/javascript"></script><script src="../common/contents_list.js" type="text/javascript"></script><script language="javascript">
+
+var SelectedAreaDefault = 0;
+var SelectedFukenDefault = 0;
+function goNextPage(page) {
+if (page!="#"&&page!="") {
+document.fukenlist.elfukenlist.selectedIndex = SelectedFukenDefault;
+document.arealist.elarealist.selectedIndex = SelectedAreaDefault;
+document.location.href=page;
+}
+}
+function goNext() {
+var page = "../week/" + document.additionInfo.fukenNo.value + ".html";
+document.location.href=page;
+}
+function init() {
+SelectedAreaDefault = document.arealist.elarealist.selectedIndex;
+SelectedFukenDefault = document.fukenlist.elfukenlist.selectedIndex;
+showOtherInfoList();
+}
+function goOtherInfo(){
+selObj = getElementByIdFromDocument( "otherInfoList" );
+if(selObj != null) {
+optObj = selObj.options[selObj.selectedIndex];
+if(optObj != null) {
+key = optObj.value;
+if(key == 'c06'){
+var fukenCode = getElementByIdFromDocument( "myAreaCode" ).value;
+var path = "../week/" + fukenCode + ".html";
+document.location.href=path;
+}
+else if(key == 'c05'){
+var fukenCode = getElementByIdFromDocument( "myAreaCode" ).value;
+var path = "../yoho/" + fukenCode + ".html";
+document.location.href=path;
+}
+else{
+jumpOtherInfo();
+}
+}
+}
+}
+
+function goJikei() {
+	var option = getElementByIdFromDocument("myAreaCode").value;
+	var path = "../jikei/" + option + ".html";
+	document.location.href=path;
+}
+
+</script><script type="text/javascript" src="../common/jquery.js"></script><script type="text/javascript">
+
+if (((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || (navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('Mobile') > 0) || navigator.userAgent.indexOf('BlackBerry') > 0 || navigator.userAgent.indexOf('Windows Phone') > 0 || navigator.userAgent.indexOf('Windows CE') > 0)) {
+	document.write("<meta name=\"viewport\" content=\"width=680,initial-scale=0.47; user-scale=yes\">");
+}
+
+</script><script type="text/javascript">
+
+if (((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || (navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('Mobile') > 0) || navigator.userAgent.indexOf('BlackBerry') > 0 || navigator.userAgent.indexOf('Windows Phone') > 0 || navigator.userAgent.indexOf('Windows CE') > 0)) {
+	document.write("<link rel=\"stylesheet\" href=\"../common/sph.css\">");
+	document.write("<script type=\"text/javascript\" src=\"../common/sph.js\"></scr"+"ipt>");
+}
+
+</script><script async="true" src="//www.jma.go.jp/jma/com/ad_js/production/jma-ga.js"></script>
+</head>
+<body onLoad="init();">
+<noscript><div>すべての機能をご利用いただくにはJavascriptを有効にしてください。</div></noscript>
+<a name="top"></a><div id="top">
+<div id="logo"><a href="/"><img src="../common/logo.gif" alt="気象庁 Japan Meteorological Agency" height="47" width="120"></a></div>
+<div id="header_right">
+<div id="header_link"><ul>
+<li id="toMain"><a href="#main">本文へ</a></li>
+<li xml:lang="en" lang="en"><a href="/jma/indexe.html">ENGLISH</a></li>
+<li><a href="/jma/kishou/info/goiken.html">ご意見･ご感想</a></li>
+<li id="siteMap"><a href="/jma/kishou/sitemap.html">サイトマップ</a></li>
+</ul></div>
+<div id="gsearch">
+<form id="cse-search-box" action="//google.com/cse">
+<input type="hidden" name="cx" value="009950868052057056798:0yrbmp7chwi"><input type="hidden" name="ie" value="UTF-8"><input id="gsearch-text" type="text" name="q"><input id="gsearch-btn" type="image" name="sa" src="/jp/common/btn_search6.png" alt="検索">
+</form>
+<script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&amp;lang=ja"></script>
+</div>
+</div>
+<table id="global" cellspacing="0" cellpadding="0"><tr>
+<td class="side"><a href="/"><div>ホーム</div></a></td>
+<td class="side"><a href="/jma/menu/menuflash.html"><div class="here">防災情報</div></a></td>
+<td class="side"><a href="/jma/menu/menureport.html"><div>各種データ・資料</div></a></td>
+<td class="side"><a href="/jma/menu/menuknowledge.html"><div>知識・解説</div></a></td>
+<td class="side"><a href="/jma/menu/menuabout.html"><div>気象庁について</div></a></td>
+<td><a href="/jma/menu/menulinks.html"><div>案内・申請</div></a></td>
+</tr></table>
+<div style="width:728px; text-align:right; font-size:14px; margin-top:5px;" class="jma_ad_space">[広告]</div>
+<div id="jma_ad_3_728x90_1" style="width: 728px; height: 90px; text-align:left; margin: 0 0 5px 0; clear:both;" class="jma_ad_space"></div>
+<div id="nesting">
+<a href="/">ホーム</a> &gt; <a href="../../jma/menu/menuflash.html">防災情報</a> &gt; 天気予報</div>
+</div>
+<div id="base">
+<div id="sidebar"><div id="submenu" class="sidemenu">
+<div style="width:300px; font-size:14px; text-align:right" class="jma_ad_space">[広告]</div>
+<div id="jma_ad_3_300x250_1" style="width: 300px; height: 250px; margin-bottom: 8px;" class="jma_ad_space"></div>
+<div style="width:300px" class="jma_ad_space"><ul class="pagelink"><li><a href="//www.jma.go.jp/jma/kishou/info/coment.html#ad_policy">広告掲載について</a></li></ul></div>
+<table border="0" cellspacing="0" cellpadding="0">
+<td></td>
+<td></td>
+<colgroup><col class="col1"></colgroup>
+<colgroup><col class="col2"></colgroup>
+<ul>
+<tr><td colspan="2">再読込ボタンかブラウザの更新ボタンをクリックして最新の情報をお使いください。</td></tr>
+<tr><td colspan="2"><img width="100%" height="2px" src="../common/line_menu.gif" alt=""></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/warn/">気象警報・注意報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;大雨・洪水警報の危険度分布</li></td></tr>
+<tr><td colspan="2">&nbsp;&nbsp;&nbsp;<a href="/jp/doshamesh/">土砂災害</a> / <a href="/jp/suigaimesh/inund.html">浸水害</a> / <a href="/jp/suigaimesh/flood.html">洪水</a>
+</td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/kishojoho/">気象情報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;海上警報 <a href="/jp/seawarn/">気象</a> / <a href="/jp/kaijyo/">火山</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/typh/">台風情報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/flood/">指定河川洪水予報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/dosha/">土砂災害警戒情報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/tatsumaki/">竜巻注意情報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/fcd/yoho/data/kouon/">高温注意情報</a>
+</li></td></tr>
+<tr><td colspan="2"><img width="100%" height="2px" src="../common/line_menu.gif" alt=""></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/tsunami/">大津波警報・津波警報・津波注意報、津波情報、津波予報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/quake/">地震情報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/svd/eew/data/nteq/index.html">南海トラフ地震関連情報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/volcano/">噴火警報・予報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/funkasokuho/">噴火速報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/ashfall/">降灰予報</a>
+</li></td></tr>
+<tr><td colspan="2"><img width="100%" height="2px" src="../common/line_menu.gif" alt=""></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/yoho/">天気予報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/fcd/yoho/wdist/jp/">天気分布予報・時系列予報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/week/">週間天気予報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/seafcst/">海上予報</a> / <a href="//www.data.jma.go.jp/fcd/yoho/umimesh/jp/">海上分布予報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/gmd/cpd/twoweek/">２週間気温予報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/gmd/cpd/souten/">早期天候情報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/longfcst/" target="_top">季節予報(1か月・3か月・暖候期・寒候期)</a>
+</li></td></tr>
+<tr><td colspan="2"><img width="100%" height="2px" src="../common/line_menu.gif" alt=""></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/g3/">天気図</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/highresorad/">雨雲の動き（高解像度降水ナウキャスト）</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/kaikotan/">今後の雨（降水短時間予報）</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/fcd/yoho/snow/jp/">現在の雪（解析積雪深・解析降雪量）</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/radnowc/">レーダー・ナウキャスト(降水・雷・竜巻)</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/gms/">気象衛星</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/gms150jp/">気象衛星（高頻度）</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;アメダス <a href="/jp/amedas/">地図形式</a> / <a href="/jp/amedas_h/">表形式</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/kuko/">空港の気象</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/windpro/">ウィンドプロファイラ（上空の風）</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/gmd/env/kosa/fcst/">黄砂情報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="//www.data.jma.go.jp/gmd/env/uvindex/">紫外線情報</a>
+</li></td></tr>
+<tr><td colspan="2"><img width="100%" height="2px" src="../common/line_menu.gif" alt=""></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/choi/">潮位観測情報</a>
+</li></td></tr>
+<tr><td colspan="2"><li>&nbsp;<a href="/jp/wave/">波浪観測情報</a>
+</li></td></tr>
+</ul>
+</table>
+<div style="width:300px; font-size:14px;text-align:right; margin-top:10px;" class="jma_ad_space">[広告]</div>
+<div id="jma_ad_3_300x250_4" style="width: 300px; height: 250px; clear:right;" class="jma_ad_space"></div>
+</div></div>
+<div id="main">
+<img src="/jma/trouble/trouble.png" alt=""><div id="title"><table><tr>
+<td class="titleText"><h1>天気予報
+： 静岡県</h1></td>
+<td class="titleOthers"><div id="others" class="select"><table><tr>
+<td width="120">その他の情報</td>
+<td>
+<input id="myAreaCode" type="hidden" value="327"><input id="myContentsId" type="hidden" value="c05"><select size="1" id="otherInfoList" onChange="jumpOtherInfo()"></select>
+</td>
+</tr></table></div></td>
+</tr></table></div>
+<div id="refre"><input type="button" title="再読込" value="再読込" onclick="document.location.reload();"></div>
+<div id="print"><input type="button" title="天気予報を印刷します。" value="印刷" onclick="print();"></div>
+<div id="area" class="select">
+<form name="additionInfo"><input type="hidden" name="fukenNo" value="327"></form>
+<table><tr>
+<td>地方</td>
+<td><form name="arealist"><select size="1" name="elarealist" onChange="javascript:goNextPage(this.options[this.selectedIndex].value)"><option></option>
+<option value="000.html">全国</option>
+<option value="201.html">北海道地方（北西部）</option>
+<option value="202.html">北海道地方（東部）</option>
+<option value="203.html">北海道地方（南西部）</option>
+<option value="204.html">東北地方（北部）</option>
+<option value="205.html">東北地方（南部）</option>
+<option value="206.html">関東地方</option>
+<option value="207.html">甲信地方</option>
+<option value="208.html">北陸地方（東部）</option>
+<option value="209.html">北陸地方（西部）</option>
+<option value="210.html">東海地方</option>
+<option value="211.html">近畿地方</option>
+<option value="212.html">中国地方</option>
+<option value="213.html">四国地方</option>
+<option value="214.html">九州地方（北部）</option>
+<option value="215.html">九州地方（南部）</option>
+<option value="216.html">奄美地方</option>
+<option value="217.html">沖縄本島地方</option>
+<option value="219.html">宮古・八重山地方</option></select></form></td>
+<td>	府県</td>
+<td><form name="fukenlist"><select size="1" name="elfukenlist" onChange="javascript:goNextPage(this.options[this.selectedIndex].value)"><option></option>
+<option value="301.html">宗谷地方</option>
+<option value="302.html">上川・留萌地方</option>
+<option value="303.html">網走・北見・紋別地方</option>
+<option value="304.html">釧路・根室・十勝地方</option>
+<option value="305.html">胆振・日高地方</option>
+<option value="306.html">石狩・空知・後志地方</option>
+<option value="307.html">渡島・檜山地方</option>
+<option value="308.html">青森県</option>
+<option value="309.html">秋田県</option>
+<option value="310.html">岩手県</option>
+<option value="311.html">山形県</option>
+<option value="312.html">宮城県</option>
+<option value="313.html">福島県</option>
+<option value="314.html">茨城県</option>
+<option value="315.html">群馬県</option>
+<option value="316.html">栃木県</option>
+<option value="317.html">埼玉県</option>
+<option value="318.html">千葉県</option>
+<option value="319.html">東京都</option>
+<option value="320.html">神奈川県</option>
+<option value="321.html">山梨県</option>
+<option value="322.html">長野県</option>
+<option value="323.html">新潟県</option>
+<option value="324.html">富山県</option>
+<option value="325.html">石川県</option>
+<option value="326.html">福井県</option>
+<option value="327.html" selected>静岡県</option>
+<option value="328.html">岐阜県</option>
+<option value="329.html">愛知県</option>
+<option value="330.html">三重県</option>
+<option value="331.html">大阪府</option>
+<option value="332.html">兵庫県</option>
+<option value="333.html">京都府</option>
+<option value="334.html">滋賀県</option>
+<option value="335.html">奈良県</option>
+<option value="336.html">和歌山県</option>
+<option value="337.html">島根県</option>
+<option value="338.html">広島県</option>
+<option value="339.html">鳥取県</option>
+<option value="340.html">岡山県</option>
+<option value="341.html">香川県</option>
+<option value="342.html">愛媛県</option>
+<option value="343.html">徳島県</option>
+<option value="344.html">高知県</option>
+<option value="345.html">山口県</option>
+<option value="346.html">福岡県</option>
+<option value="347.html">佐賀県</option>
+<option value="348.html">長崎県</option>
+<option value="349.html">熊本県</option>
+<option value="350.html">大分県</option>
+<option value="351.html">宮崎県</option>
+<option value="352.html">鹿児島県</option>
+<option value="353.html">沖縄本島地方</option>
+<option value="354.html">大東島地方</option>
+<option value="355.html">宮古島地方</option>
+<option value="356.html">八重山地方</option></select></form></td>
+</tr></table>
+</div>
+<div id="jumpExplain" class="innerJump"><a href="#explain">説明へ</a></div>
+<div id="guide">
+<a href="/jma/kishou/keika/327.html">
+早期注意情報（警報級の可能性）へ</a><br><a href="//www.data.jma.go.jp/fcd/yoho/wdist/jp/">天気分布予報・時系列予報へ</a><br>
+</div>
+<div>
+<table class="forecast" id="forecasttablefont">
+<caption style="text-align:left;">2日17時静岡地方気象台発表の天気予報(今日2日から明後日4日まで)
+</caption>
+<tr>
+<th colspan="2" class="th-area"><div style="float: left">中部</div></th>
+<th class="th-rain">降水確率</th>
+<th class="th-temp">気温予報</th>
+</tr>
+<tr>
+<th class="weather">
+今夜2日<br><img src="img/701.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　やや強く　海上　では　北西の風　強く　晴れ　夜のはじめ頃　くもり<br>波　３メートル　後　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left">00-06</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">06-12</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">12-18</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp"><tr>
+<th></th>
+<th></th>
+<th nowrap></th>
+</tr></table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明日3日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　後　やや強く　海上　では　西の風　強く　晴れ　時々　くもり<br>波　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left" nowrap>00-06</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>06-12</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>12-18</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp">
+<tr>
+<th></th>
+<th nowrap>朝の最低</th>
+<th nowrap>日中の最高</th>
+</tr>
+<tr>
+<td class="city">静岡</td>
+<td class="min">1度</td>
+<td class="max">12度</td>
+</tr>
+</table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明後日4日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　後　やや強く　晴れ　時々　くもり<br>波　２メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td><br></td>
+<td rowspan="4"><div><input class="linkbtn" type="button" title="週間天気予報へ" value="週間天気予報へ" onclick="javascript:goNext()"></div></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+</table></div></td>
+<td class="temp">&nbsp;
+</td>
+</tr>
+<tr>
+<th colspan="2" class="th-area"><div style="float: left">伊豆</div></th>
+<th class="th-rain">降水確率</th>
+<th class="th-temp">気温予報</th>
+</tr>
+<tr>
+<th class="weather">
+今夜2日<br><img src="img/700.png" align="middle" title="晴れ" alt="晴れ"><br>
+</th>
+<td class="info">西の風　やや強く　伊豆南　では　西の風　強く　晴れ<br>波　３メートル　後　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left">00-06</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">06-12</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">12-18</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp"><tr>
+<th></th>
+<th></th>
+<th nowrap></th>
+</tr></table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明日3日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　やや強く　伊豆南　では　西の風　強く　晴れ　時々　くもり<br>波　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left" nowrap>00-06</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>06-12</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>12-18</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp">
+<tr>
+<th></th>
+<th nowrap>朝の最低</th>
+<th nowrap>日中の最高</th>
+</tr>
+<tr>
+<td class="city">網代</td>
+<td class="min">3度</td>
+<td class="max">9度</td>
+</tr>
+<tr>
+<td class="city">石廊崎</td>
+<td class="min">6度</td>
+<td class="max">10度</td>
+</tr>
+</table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明後日4日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　後　やや強く　晴れ　時々　くもり<br>波　２．５メートル　後　２メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td><br></td>
+<td rowspan="4"><div><input class="linkbtn" type="button" title="週間天気予報へ" value="週間天気予報へ" onclick="javascript:goNext()"></div></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+</table></div></td>
+<td class="temp">&nbsp;
+</td>
+</tr>
+<tr>
+<th colspan="2" class="th-area"><div style="float: left">東部</div></th>
+<th class="th-rain">降水確率</th>
+<th class="th-temp">気温予報</th>
+</tr>
+<tr>
+<th class="weather">
+今夜2日<br><img src="img/700.png" align="middle" title="晴れ" alt="晴れ"><br>
+</th>
+<td class="info">西の風　後　北東の風　海上　では　西の風　やや強く　晴れ<br>波　１メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left">00-06</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">06-12</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">12-18</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp"><tr>
+<th></th>
+<th></th>
+<th nowrap></th>
+</tr></table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明日3日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">東の風　日中　南西の風　海上　では　西の風　やや強く　晴れ　時々　くもり<br>波　１メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left" nowrap>00-06</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>06-12</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>12-18</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp">
+<tr>
+<th></th>
+<th nowrap>朝の最低</th>
+<th nowrap>日中の最高</th>
+</tr>
+<tr>
+<td class="city">三島</td>
+<td class="min">-1度</td>
+<td class="max">11度</td>
+</tr>
+</table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明後日4日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">南西の風　晴れ　時々　くもり<br>波　１メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td><br></td>
+<td rowspan="4"><div><input class="linkbtn" type="button" title="週間天気予報へ" value="週間天気予報へ" onclick="javascript:goNext()"></div></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+</table></div></td>
+<td class="temp">&nbsp;
+</td>
+</tr>
+<tr>
+<th colspan="2" class="th-area"><div style="float: left">西部</div></th>
+<th class="th-rain">降水確率</th>
+<th class="th-temp">気温予報</th>
+</tr>
+<tr>
+<th class="weather">
+今夜2日<br><img src="img/701.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　やや強く　海上　では　北西の風　強く　晴れ　夜のはじめ頃　くもり<br>波　３メートル　後　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left">00-06</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">06-12</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">12-18</td>
+<td align="right">--%</td>
+</tr>
+<tr>
+<td align="left">18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp"><tr>
+<th></th>
+<th></th>
+<th nowrap></th>
+</tr></table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明日3日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　後　やや強く　海上　では　西の風　強く　晴れ　時々　くもり<br>波　２．５メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td align="left" nowrap>00-06</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>06-12</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>12-18</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td align="left" nowrap>18-24</td>
+<td align="right">0%</td>
+</tr>
+</table></div></td>
+<td class="temp"><div class="font-size-clear"><table class="temp">
+<tr>
+<th></th>
+<th nowrap>朝の最低</th>
+<th nowrap>日中の最高</th>
+</tr>
+<tr>
+<td class="city">浜松</td>
+<td class="min">2度</td>
+<td class="max">9度</td>
+</tr>
+<tr>
+<td class="city">御前崎</td>
+<td class="min">3度</td>
+<td class="max">9度</td>
+</tr>
+</table></div></td>
+</tr>
+<tr>
+<th class="weather">
+明後日4日<br><img src="img/101.png" align="middle" title="晴れ時々曇り" alt="晴れ時々曇り"><br>
+</th>
+<td class="info">西の風　後　やや強く　晴れ　時々　くもり<br>波　２メートル</td>
+<td class="rain"><div class="font-size-clear"><table class="rain">
+<tr>
+<td><br></td>
+<td rowspan="4"><div><input class="linkbtn" type="button" title="週間天気予報へ" value="週間天気予報へ" onclick="javascript:goNext()"></div></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br></td>
+<td><br></td>
+</tr>
+</table></div></td>
+<td class="temp">&nbsp;
+</td>
+</tr>
+</table>
+<div class="fortemplete">(/:のち, |:時々または一時)</div>
+<br>
+</div>
+<pre class="textframe">天気概況
+令和０３年１月２日１６時３８分　静岡地方気象台発表
+
+<b>　中部、伊豆、西部では、強風や高波に注意してください。中部では、空気
+の乾燥した状態が続くため、火の取り扱いに注意してください。</b>
+
+　日本付近は、冬型の気圧配置となっています。
+
+　静岡県は、晴れまたは曇りとなっています。
+
+　２日は、冬型の気圧配置が続くためおおむね晴れますが、寒気の影響で雲が広がりやすいでしょう。
+
+　３日は、冬型の気圧配置が続くためおおむね晴れますが、寒気の影響で雲が広がりやすい見込みです。</pre>
+<div id="explain">
+<a name="explain"></a>
+毎日5時・11時・17時に発表します。<br>
+また、この時間以外にも状況により随時発表します。<br>
+最新の天気予報をご利用ください。
+<br><br><ul class="pagelink">
+<li><a href="/jma/kishou/know/kurashi/yoho.html">天気予報について</a></li>
+<li><a href="/jma/kishou/know/saibun/index.html">天気予報の発表区域について</a></li>
+</ul>
+</div>
+<div id="gotop"><a href="#top">このページのトップへ</a></div>
+</div>
+</div>
+<div id="foot">
+<div id="disclosure_wrap" style="width: 960px; clear: both;text-align:left;" class="jma_ad_space">
+<div style="width:300px; text-align:right; margin-right: 20px; float: left;font-size:14px">[広告]</div>
+<div style="width:300px; text-align:right;float: left;font-size:14px">[広告]</div>
+</div>
+<div id="footer_ad_wrap" style="width: 960px; height: 250px; clear: both;text-align:left; margin-bottom:20px;" class="jma_ad_space">
+<div id="jma_ad_3_300x250_2" style="width: 300px; height: 250px; margin-right: 20px; float: left;"></div>
+<div id="jma_ad_3_300x250_3" style="width: 300px; height: 250px; float: left;"></div>
+</div>
+<a href="/jma/kishou/info/coment.html">気象庁ホームページについて</a><input type="button" id="jma_ad_config_button" name="jma_ad_config_button" value="広告非表示" style="cursor:pointer"><script async="true" src="//www.jma.go.jp/jma/com/ad_js/production/jma-ad-common.js"></script><script async="true" src="//www.jma.go.jp/jma/com/ad_js/production/jma-ad-hb-config.js"></script><script async="true" src="//www.jma.go.jp/jma/com/ad_js/production/jma-prebid.js"></script><script async="true" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><script async="true" src="//www.jma.go.jp/jma/com/ad_js/production/gptslots3.js"></script>
+</div>
+</body>
+</html>
