@@ -1,2 +1,4 @@
-# shellgei160
-公然の秘密
+# シェル・ワンライナー160本ノックのデータ、情報サイト
+
+* https://honto.jp/netstore/pd-book_31146231.html
+
