@@ -16,5 +16,5 @@
 
 ## 連絡先
 
-* [@ryuichiueda](https://twitter.com/ryuichiueda)（愚痴・文句の多い方を目にすると仕事に支障が出るので全く恨みはないんですけどブロックしている可能性があります。）
+* [@ryuichiueda](https://twitter.com/ryuichiueda)（愚痴・文句の多い方を目にすると仕事の集中力が落ちるので、全く恨みはないんですけどブロックしている可能性があります。）
 * 他の著者のTwitterアカウント
