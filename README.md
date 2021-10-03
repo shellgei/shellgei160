@@ -13,3 +13,8 @@
 
 * 技術評論社の本書籍のページ: https://gihyo.jp/book/2021/978-4-297-12267-6
 * シェル芸の情報を集めるサイト: https://shellgei.github.io/info/
+
+## 連絡先
+
+* [@ryuichiueda](https://twitter.com/ryuichiueda)（愚痴・文句の多い方を目にすると仕事に支障が出るので全く恨みはないんですけどブロックしている可能性があります。）
+* 他の著者のTwitterアカウント
