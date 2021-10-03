@@ -20,6 +20,9 @@ $ git clone https://github.com/shellgei/shellgei160.git
 
 その他、シェル芸の一般的な情報は[シェル芸の情報を集めるサイト](https://shellgei.github.io/info/)にあります。
 
+## お知らせ
+
+* 電子版の一部にスラッシュが抜ける誤りがあるようで、対応中です。（20211004）
 
 ## 参考のサイト
 
