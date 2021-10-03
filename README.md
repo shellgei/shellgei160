@@ -28,5 +28,5 @@ $ git clone https://github.com/shellgei/shellgei160.git
 
 ## 連絡先
 
-* [@ryuichiueda](https://twitter.com/ryuichiueda)（愚痴・文句、外野からの意見の多い方を目にすると仕事の集中力が落ちるので、全く恨みはないんですけど機械的にブロックしている可能性があります。）
+* [@ryuichiueda](https://twitter.com/ryuichiueda)（ひねりのない直球の愚痴・文句、外野からの意見の多い方を目にすると仕事の集中力が落ちるので、全く恨みはないんですけど機械的にブロックしている可能性があります。）
 * 他の著者のTwitterアカウント
