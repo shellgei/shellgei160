@@ -6,12 +6,6 @@
 $ git clone https://github.com/shellgei/shellgei160.git
 ```
 
-あるいは
-
-```
-$ git clone git@github.com:shellgei/shellgei160.git
-```
-
 をお願いします。
 
 ## このリポジトリの役割
