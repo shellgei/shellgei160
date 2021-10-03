@@ -7,6 +7,7 @@
 * 質問の受け付け（[issue](https://github.com/shellgei/shellgei160/issues)にて受け付けています。）
 * 訂正の掲示
     * 2021年10月3日現在、まだありません。（いや、必ずあるはずですが。）
+* その他、シェル芸の一般的な情報は[シェル芸の情報を集めるサイト](https://shellgei.github.io/info/)にあります。
 
 
 ## 参考のサイト
