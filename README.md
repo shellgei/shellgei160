@@ -6,7 +6,7 @@
 $ git clone https://github.com/shellgei/shellgei160.git
 ```
 
-をお願いします。
+をお願いします。（できる人はforkでお願いします。）
 
 ## このリポジトリの役割
 
