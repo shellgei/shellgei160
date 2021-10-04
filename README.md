@@ -13,7 +13,6 @@ $ git clone https://github.com/shellgei/shellgei160.git
 * 問題で利用するデータの提供
 * 質問の受け付け（[issue](https://github.com/shellgei/shellgei160/issues)にて受け付けています。）
 * 訂正の掲示
-    * 2021年10月3日現在、まだありません。（いや、必ずあるはずですが。）
 * 解答、別解のテキストデータの提供（`answer`ディレクトリにあります。）
     * さらなる別解のプルリクエスト大歓迎
 
