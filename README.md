@@ -23,6 +23,7 @@ $ git clone https://github.com/shellgei/shellgei160.git
 
 * [問題23で記述に誤りがありました](https://github.com/shellgei/shellgei160/issues/6)。訂正を掲載しました。（20211004）
 * 電子版の一部にスラッシュが抜ける誤りがあるようで、対応中です。（20211004）
+    * 対応完了（20211007） 
 
 ## 訂正
 
