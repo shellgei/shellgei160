@@ -44,6 +44,7 @@ $ git clone https://github.com/shellgei/shellgei160.git
 ## issueに寄せられたコメント
 
 * [正規表現の`{,n}`という指定について](https://github.com/shellgei/shellgei160/issues/7)
+* [UTF-32BEについて](https://github.com/shellgei/shellgei160/issues/28)
 
 ## 参考のサイト
 
