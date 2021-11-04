@@ -41,6 +41,10 @@ $ git clone https://github.com/shellgei/shellgei160.git
 |p.266| 2番目のコードブロックの直後の1行 | その番号から数字が開始するようになります。 | その引数の番号から数字が開始するようになります。 | [issue27](https://github.com/shellgei/shellgei160/issues/27) | 同上 |
 
 
+## issueに寄せられたコメント
+
+* [正規表現の`{,n}`という指定について](https://github.com/shellgei/shellgei160/issues/7)
+
 ## 参考のサイト
 
 * 技術評論社の本書籍のページ: https://gihyo.jp/book/2021/978-4-297-12267-6
