@@ -1,0 +1,1 @@
+grep '\.exe$' files.txt
