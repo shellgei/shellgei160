@@ -43,10 +43,15 @@ $ git clone https://github.com/shellgei/shellgei160.git
 |p.266| 2番目のコードブロックの直後の1行 | その番号から数字が開始するようになります。 | その引数の番号から数字が開始するようになります。 | [issue27](https://github.com/shellgei/shellgei160/issues/27) | 同上 |
 
 
+## macでの挙動についての情報
+
+* https://github.com/shellgei/shellgei160/issues?q=is%3Aissue+label%3Amac+
+
 ## issueに寄せられたコメント
 
 * [正規表現の`{,n}`という指定について](https://github.com/shellgei/shellgei160/issues/7)
 * [UTF-32BEについて](https://github.com/shellgei/shellgei160/issues/28)
+
 
 ## 参考のサイト
 
