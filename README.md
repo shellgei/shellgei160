@@ -14,7 +14,7 @@ $ git clone https://github.com/shellgei/shellgei160.git
 * 質問の受け付け（[issue](https://github.com/shellgei/shellgei160/issues)にて受け付けています。）
 * 訂正の掲示
 * 解答、別解のテキストデータの提供（`answer`ディレクトリにあります。）
-    * さらなる別解のプルリクエスト大歓迎
+    * さらなる別解のプルリクエスト大歓迎（[例](https://github.com/shellgei/shellgei160/pull/34)）
 
 
 その他、シェル芸の一般的な情報は[シェル芸の情報を集めるサイト](https://shellgei.github.io/info/)にあります。
