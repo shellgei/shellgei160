@@ -1,5 +1,8 @@
 #!/bin/bash
 
-[ "$1" = "" ] && read n || n="$1";
-echo $((n*2))
+num=${1:-$(cat)};
+# num=${1};
+# num=$(cat);
+echo $((num*2));
+
 
