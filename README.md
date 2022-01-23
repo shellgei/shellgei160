@@ -53,10 +53,12 @@ $ git clone https://github.com/shellgei/shellgei160.git
 * [UTF-32BEについて](https://github.com/shellgei/shellgei160/issues/28)
 
 
-## 参考のサイト
+## 参考サイト
 
 * 技術評論社の本書籍のページ: https://gihyo.jp/book/2021/978-4-297-12267-6
 * シェル芸の情報を集めるサイト: https://shellgei.github.io/info/
+* [たいちょー](https://twitter.com/xztaityozx_001)さんのブログ: https://xztaityozx.hatenablog.com/archive/category/shellgei160
+    * 解答例があります。
 
 ## 連絡先
 
