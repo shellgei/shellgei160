@@ -1,13 +1,13 @@
 test.txt
 test.exe
-画面仕様書_v2.0.xls
-画面仕様書.xls.exe
+화면사양서_v2.0.xls
+화면사양서.xls.exe
 secret file.md
-画面仕様書_改訂版.xlsx
-画面仕様書_最新バージョン.xls
+화면사양서_개정판.xlsx
+화면사양서_최신버전.xls
 README.md
-秘密のファイル.exe.jpeg
+비밀파일.exe.jpeg
 LICENSE
 execution.sh
 packman_exe
-重要書類.doc
+중요서류.doc
