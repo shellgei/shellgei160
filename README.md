@@ -17,7 +17,7 @@ $ git clone https://github.com/shellgei/shellgei160.git
     * さらなる別解のプルリクエスト大歓迎（[例](https://github.com/shellgei/shellgei160/pull/34)）
 
 
-その他、シェル芸の一般的な情報は[上田の個人サイトのシェル芸のページ](https://b.ueda.tech/?page=01434)で随時更新しています。
+その他、シェル芸の一般的な情報は、[上田の個人サイト内にあるシェル芸のページ](https://b.ueda.tech/?page=01434)で随時更新しています。
 
 ## お知らせ
 
