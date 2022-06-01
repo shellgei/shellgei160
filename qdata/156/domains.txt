@@ -1,4 +1,4 @@
-gihyo.jp
+jpub.tistory.com
 github.com
 gitlab.com
 wikipedia.org
