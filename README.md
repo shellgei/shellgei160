@@ -1,35 +1,34 @@
-# シェル・ワンライナー160本ノックのリポジトリ
+# 쉘 원라이너 160문제 샘플 저장소
 
-　技術評論社から出版された「[シェル・ワンライナー160本ノック](https://gihyo.jp/book/2021/978-4-297-12267-6)」のためのリポジトリです。書籍を購入した人は、とりあえず、
+이 책은 제이펍에서 출간한 '[쉘 원라이너 160문제]()'의 샘플 저장소입니다. 서적을 구매해 주셔서 감사합니다.
 
 ```
-$ git clone https://github.com/shellgei/shellgei160.git
+$ git clone https://github.com/moseskim/shell-oneliner.git
 ```
 
-をお願いします。（できる人はforkでお願いします。）
+로 다운로드 할 수 있습니다(가능하다면 fork를 하시기 바랍.
 
-## このリポジトリの役割
+## 이 저장소의 역할
 
-* 問題で利用するデータの提供
-* 質問の受け付け（[issue](https://github.com/shellgei/shellgei160/issues)にて受け付けています。）
-* 訂正の掲示
-* 解答、別解のテキストデータの提供（`answer`ディレクトリにあります。）
-    * さらなる別解のプルリクエスト大歓迎（[例](https://github.com/shellgei/shellgei160/pull/34)）
+* 문제에서 이용하는 데이터 제공
+* 문의 접수([issue](https://github.com/moseskim/shell-oneliner/issues)
+* 정정 내용 게제
+* 해답 및 다른 풀이의 텍스트 데이터 제공(`answer` 디렉터리 참조)
+    * 다양한 다른 풀이의 풀 리퀘스트는 대환영입니다([예](https://github.com/shellgei/shellgei160/pull/34)）
 
+기타 쉘 예능의 일반적인 정보는 [쉘 예능 정보 관련 사이트(일본어)](https://shellgei.github.io/info/)를 참조합니다.
 
-その他、シェル芸の一般的な情報は[シェル芸の情報を集めるサイト](https://shellgei.github.io/info/)にあります。
+## 알림
 
-## お知らせ
+* [문제 23에 오타가 있었습니다](https://github.com/shellgei/shellgei160/issues/6). 정정해서 업로드했습니다. (20211004）
+* 전자 서적 버전의 일부에서 슬래시 누락을 발견했습니다. 대응하고 있습니다. (20211004）
+    * 대응 완료.（20211007） 
 
-* [問題23で記述に誤りがありました](https://github.com/shellgei/shellgei160/issues/6)。訂正を掲載しました。（20211004）
-* 電子版の一部にスラッシュが抜ける誤りがあるようで、対応中です。（20211004）
-    * 対応完了（20211007） 
+## 정정
 
-## 訂正
+### 2쇄 (일본어)까지
 
-### 第2刷まで
-
-|ページ|場所|修正前|修正後|発見者・状況|コメント（主に上田）|
+|페이지|위치|수정전|수정후|발견자/상황|코멘트(주로 우에다)|
 |-----|--------------------|-------------|----------------|----------|----------|
 |p.105  |問題文4行目|このシェルの挙動もシグナルに関係しています。|これと同じような挙動はシグナルでも実現できます。| [issue6](https://github.com/shellgei/shellgei160/issues/6)|たぶん私が筆を入れたときに埋め込み -> みんなスルーという状況で発生したような気が・・・|
 |p.106 |本文の3行目|Ctrl＋Qで発行されるシグナル|Ctrl＋Qと同じ働きをするシグナル|同上|同上|
@@ -43,9 +42,9 @@ $ git clone https://github.com/shellgei/shellgei160.git
 |p.266| 2番目のコードブロックの直後の1行 | その番号から数字が開始するようになります。 | その引数の番号から数字が開始するようになります。 | [issue27](https://github.com/shellgei/shellgei160/issues/27) | 同上 |
 
 
-## macでの挙動についての情報
+## mac에서의 동작에 관한 정보
 
-* https://github.com/shellgei/shellgei160/issues?q=is%3Aissue+label%3Amac+
+* https://github.com/shellgei/shellgei160/issues?q=is%3Aissue+label%3Amac+ (일본어)
 
 ## issueに寄せられたコメント
 
