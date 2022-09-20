@@ -30,7 +30,7 @@ $ git clone https://github.com/shellgei/shellgei160.git
 
 |ページ|場所|修正前|修正後|発見者・状況|コメント（主に上田）|
 |-----|--------------------|-------------|----------------|----------|----------|
-|p.428 |解答をつくっていくなかのgrepのオプション|grep -zoP|grep -zoE|[issue52](https://github.com/shellgei/shellgei160/issues/52)|「念のため」なので-Pはなくてよいのですが、-zと-Pの組み合わせは現状機能しないようです。|
+|p.428 |解答をつくっていくなかのgrepのオプション（4箇所）|grep -zoP|grep -zoE|[issue52](https://github.com/shellgei/shellgei160/issues/52)|「念のため」なので-Pはなくてよいのですが、-zと-Pの組み合わせは現状機能しないようです。|
 
 ### 第4刷まで
 
