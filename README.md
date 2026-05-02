@@ -31,7 +31,7 @@ $ git clone https://github.com/shellgei/shellgei160.git
 
 |ページ|場所|修正前|修正後|発見者・状況|コメント |
 |-----|--------------------|-------------|----------------|----------|----------|
-|p.389|問題135別解3|`echo '(defun AAA (n) (+ n n)) )(' | awk -F '' '{n=0;for(i=1;i<=NF;i++){if($i=="(")n++;if($i==")"){n--;if(i!=NF && n==0){print $0}}}}n!=0'`|`echo '(defun AAA (n) (+ n n)) )(' | awk -F '' '{n=0;for(i=1;i<=NF;i++){if($i=="(")n++;if($i==")"){if(n==0){print $0;exit};n--}}}n!=0'`| [issue74](https://github.com/shellgei/shellgei160/issues/72) |途中でカッコの数が釣り合うと文法が正しいのに問題があるという判断になってしまう。（メモ: 訂正は脚注で[ktrarai](https://github.com/ktrarai)さんから間違いの指摘があって修正したと記述する。）|
+|p.389|問題135別解3|`awk -F '' '{n=0;for(i=1;i<=NF;i++){if($i=="(")n++;if($i==")"){n--;if(i!=NF && n==0){print $0}}}}n!=0'`|`awk -F '' '{n=0;for(i=1;i<=NF;i++){if($i=="(")n++;if($i==")"){if(n==0){print $0;exit};n--}}}n!=0'`| [issue74](https://github.com/shellgei/shellgei160/issues/72) |途中でカッコの数が釣り合うと文法が正しいのに問題があるという判断になってしまう。（メモ: 訂正は脚注で[ktrarai](https://github.com/ktrarai)さんから間違いの指摘があって修正したと記述する。）|
 |p.398|問題139別解1|`s/\/[^\/]*//;`|`s/\/[^\/]*$//;`| [issue72](https://github.com/shellgei/shellgei160/issues/72) |結果が題意と異なってしまう|
 |p.400|問題140別解1|`yes paste -d ...`|`yes -- paste -d`| [issue73](https://github.com/shellgei/shellgei160/issues/73) |`yes`の仕様変更|
 
