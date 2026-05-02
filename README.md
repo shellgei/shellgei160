@@ -32,6 +32,7 @@ $ git clone https://github.com/shellgei/shellgei160.git
 |ページ|場所|修正前|修正後|発見者・状況|コメント |
 |-----|--------------------|-------------|----------------|----------|----------|
 |p.398|問題139別解1|`s/\/[^\/]*//;`|`s/\/[^\/]*$//;`| [issue72](https://github.com/shellgei/shellgei160/issues/72) |結果が題意と異なってしまう|
+|p.400|問題140別解1|`yes paste -d ...`|`yes -- paste -d`| [issue73](https://github.com/shellgei/shellgei160/issues/73) |`yes`の仕様変更|
 
 ### 第5刷で対応
 
