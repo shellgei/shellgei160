@@ -31,6 +31,7 @@ $ git clone https://github.com/shellgei/shellgei160.git
 
 |ページ|場所|修正前|修正後|発見者・状況|コメント |
 |-----|--------------------|-------------|----------------|----------|----------|
+|p.311|問題101別解3|`awk 'BEGIN{n=$0}{if($0 - n <= 1){printf $0" " }else{printf "\n"$0" "} n=$0}END{print}'`|`awk '{if($0 - n <= 1){printf $0" " }else{printf "\n"$0" "} n=$0}'`|[issue76](https://github.com/shellgei/shellgei160/issues/76)|最終的な出力に影響はないものの、`BEGIN`節と`END`節は不要。次刷がある場合はベストエフォートで修正する。|
 |p.389|問題135別解3|`awk -F '' '{n=0;for(i=1;i<=NF;i++){if($i=="(")n++;if($i==")"){n--;if(i!=NF && n==0){print $0}}}}n!=0'`|`awk -F '' '{n=0;for(i=1;i<=NF;i++){if($i=="(")n++;if($i==")"){if(n==0){print $0;exit};n--}}}n!=0'`| [issue74](https://github.com/shellgei/shellgei160/issues/74) |途中でカッコの数が釣り合うと文法が正しいのに問題があるという判断になってしまう。（メモ: 訂正は脚注で[ktrarai](https://github.com/ktrarai)さんから間違いの指摘があって修正したと記述する。）|
 |p.398|問題139別解1|`s/\/[^\/]*//;`|`s/\/[^\/]*$//;`| [issue72](https://github.com/shellgei/shellgei160/issues/72) |結果が題意と異なってしまう|
 |p.400|問題140別解1|`yes paste -d ...`|`yes -- paste -d`| [issue73](https://github.com/shellgei/shellgei160/issues/73) |`yes`の仕様変更|
